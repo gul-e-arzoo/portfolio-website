@@ -1,0 +1,108 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { scheduleCallHref } from "@/constants";
+import { FaChevronDown } from "react-icons/fa";
+
+const Hero = () => {
+  const scrollToWork = () => {
+    document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  return (
+    <section
+      id="hero"
+      className="relative w-full overflow-hidden bg-[#1B0002] pt-28 md:pt-32 pb-14 md:pb-20"
+    >
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_35%,rgba(255,119,130,0.18),transparent_70%)]"
+        aria-hidden
+      />
+
+      <div className="relative z-10 mx-auto max-w-[920px] px-4 sm:px-6">
+        <div className="mb-8 flex flex-col items-center justify-center gap-3 sm:mb-10 sm:flex-row sm:flex-wrap sm:gap-4">
+          <Image
+            src="/Group.svg"
+            alt=""
+            width={240}
+            height={38}
+            className="h-9 w-auto object-contain md:h-10"
+            style={{ width: "auto", height: "auto" }}
+            priority
+          />
+          <p className="flex flex-wrap items-center justify-center gap-1.5 text-center text-sm text-white/90 md:text-base">
+            <span>Trusted by</span>
+            <span className="inline-block -rotate-2 rounded-sm bg-gradient-to-r from-[#FF7782] to-[#6B3237] px-1.5 py-0.5 text-xs font-extrabold text-white md:text-sm">
+              25+
+            </span>
+            <span>Coaches, Founders &amp; Functional Execs</span>
+          </p>
+        </div>
+
+        <div className="text-center">
+          <h1 className="font-bricolage text-3xl font-bold leading-[1.1] text-[#fff1f3] sm:text-5xl lg:text-[64px]">
+            The{" "}
+            <span className="text-[#FF7782]">Home of Premium</span>
+          </h1>
+
+          <div className="mt-2 flex flex-wrap items-center justify-center gap-2 md:gap-3">
+            <span className="font-bricolage text-3xl font-bold text-[#fff1f3] sm:text-5xl lg:text-[64px]">
+              LinkedIn
+            </span>
+            <Image
+              src="/Linkedin.svg"
+              alt=""
+              width={72}
+              height={72}
+              className="-rotate-6 h-14 w-14 shrink-0 md:h-16 md:w-16 lg:h-[72px] lg:w-[72px]"
+              style={{ width: "auto", height: "auto" }}
+              priority
+            />
+            <span className="font-bricolage text-3xl font-bold text-[#fff1f3] sm:text-5xl lg:text-[64px]">
+              Brand Design
+            </span>
+          </div>
+
+          <p className="mx-auto mt-6 max-w-[640px] text-base leading-relaxed text-[#fff1f3]/90 md:mt-8 md:text-lg">
+            I build the profile, the content, and the pages that make coaches,
+            founders and execs easy to find and easy to trust. One roof. One
+            system.
+          </p>
+        </div>
+
+        <div className="mt-8 flex flex-row flex-wrap items-center justify-center gap-3 sm:mt-10 sm:gap-4 md:mt-12">
+          <a
+            href={scheduleCallHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-[#FF7782] px-5 py-3 text-sm font-semibold text-[#1B0002] shadow-[0_8px_28px_rgba(255,119,130,0.35)] transition-colors hover:bg-[#ff6875] sm:px-7 sm:py-3.5 sm:text-base"
+          >
+            <Image
+              src="/Schedule.svg"
+              alt=""
+              width={24}
+              height={24}
+              className="h-6 w-6 shrink-0"
+              style={{ width: "auto", height: "auto" }}
+            />
+            Book a free 1:1 call
+          </a>
+
+          <button
+            type="button"
+            onClick={scrollToWork}
+            className="inline-flex shrink-0 cursor-pointer items-center justify-center gap-3 rounded-full border border-[#FF7782]/80 bg-[#1B0002] px-5 py-3 text-sm font-medium text-white transition-colors hover:border-[#FF7782] sm:px-7 sm:py-3.5 sm:text-base"
+          >
+            See my Work
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#FF7782] text-[#1B0002]">
+              <FaChevronDown className="text-sm" />
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

@@ -1,0 +1,9 @@
+export { default as LandingHero } from "./hero/HeroSection";
+export { default as LeadLeaksSection } from "./lead-leaks/LeadLeaksSection";
+export { default as PlugLeaksSection } from "./plug-leaks/PlugLeaksSection";
+export { default as ProcessSection } from "./process/ProcessSection";
+export { default as VisibilitySection } from "./visibility/VisibilitySection";
+export { default as ResultsSection } from "./results/ResultsSection";
+export { default as PricingSection } from "./pricing/PricingSection";
+export { default as FaqSection } from "./faq/FaqSection";
+export { default as FinalCtaSection } from "./final-cta/FinalCtaSection";

@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-bricolage-grotesque), sans-serif;
+  --font-bricolage: var(--font-bricolage-grotesque), sans-serif;
+  --font-playfair: var(--font-playfair-display), serif;
+  --font-helvetica: var(--font-helvetica-neue), sans-serif;
+}
+/* Custom Seamless Vertical Marquee Animations */
+
+@keyframes marqueeUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-33.3333%);
+  }
+}
+
+@keyframes marqueeDown {
+  0% {
+    transform: translateY(-13.3333%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* Custom Tailwind Helper Classes */
+.animate-marquee-up {
+  animation: marqueeUp linear infinite;
+}
+
+.animate-marquee-down {
+  animation: marqueeDown linear infinite;
+}
+
+
+.animate-marquee-up:hover,
+.animate-marquee-down:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeHorizontalLtr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-horizontal-ltr {
+  animation: marqueeHorizontalLtr linear infinite;
+}
+
+.animate-marquee-horizontal-ltr:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeHorizontalRtl {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-horizontal-rtl {
+  animation: marqueeHorizontalRtl linear infinite;
+}
+
+.animate-marquee-horizontal-rtl:hover {
+  animation-play-state: paused;
+}
+
+.lead-leak-marquee:hover .lead-leak-marquee-track {
+  animation-play-state: paused;
+}
+
+.portfolio-gallery-marquee:hover .portfolio-gallery-marquee-track {
+  animation-play-state: paused;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}

@@ -1,0 +1,75 @@
+import React from "react";
+import Image from "next/image";
+import { scheduleCallHref } from "@/constants";
+
+const cornerGlowBg = `radial-gradient(ellipse 90% 75% at 0% 0%, rgba(255,119,130,0.24), transparent 58%),
+  radial-gradient(ellipse 80% 70% at 100% 0%, rgba(255,119,130,0.18), transparent 52%),
+  radial-gradient(ellipse 70% 60% at 100% 100%, rgba(255,119,130,0.14), transparent 48%),
+  radial-gradient(ellipse 65% 55% at 0% 100%, rgba(255,119,130,0.12), transparent 45%)`;
+
+const FinalCtaSection = () => {
+  return (
+    <section className="relative w-full overflow-x-clip bg-[#1B0002] py-16 md:py-24">
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[min(100%,520px)] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(255,119,130,0.2),transparent_70%)]"
+        aria-hidden
+      />
+
+      <div className="relative mx-auto max-w-[720px] px-4 sm:px-6">
+        <div className="relative isolate">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -inset-5 rounded-[28px] bg-[#FF7782]/30 blur-3xl"
+          />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -inset-2 rounded-[24px] bg-[#FF7782]/15 blur-xl"
+          />
+
+          <div
+            className="relative z-10 overflow-hidden rounded-2xl border border-[#FF7782]/55 px-6 py-12 text-center shadow-[0_0_0_1px_rgba(255,119,130,0.2),0_0_40px_rgba(255,119,130,0.35),0_0_80px_rgba(255,119,130,0.18)] md:px-10 md:py-14"
+            style={{
+              backgroundColor: "#431216",
+              backgroundImage: cornerGlowBg,
+            }}
+          >
+            <div
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,119,130,0.22),transparent_55%)]"
+              aria-hidden
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 rounded-2xl shadow-[inset_0_0_48px_rgba(255,119,130,0.1)]"
+            />
+
+            <div className="relative z-10">
+              <Image
+                src="/logo.svg"
+                alt=""
+                width={56}
+                height={56}
+                className="mx-auto h-14 w-14 rounded-full border-2 border-[#FF7782] shadow-[0_0_20px_rgba(255,119,130,0.35)]"
+              />
+              <h2 className="mt-6 font-bricolage text-2xl font-bold text-white md:text-3xl">
+                Ready to take your brand to the next level?
+              </h2>
+              <p className="mx-auto mt-3 max-w-md text-sm text-white/75">
+                Book a free call. We&apos;ll map the leaks and what to fix first.
+              </p>
+              <a
+                href={scheduleCallHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF7782] px-8 py-3.5 text-sm font-semibold text-[#1B0002] shadow-[0_8px_28px_rgba(255,119,130,0.4)] transition-colors hover:bg-[#ff6875]"
+              >
+                Book a call
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FinalCtaSection;
