@@ -66,7 +66,7 @@ function PricingCard({ tier }) {
             {tier.description}
           </p>
 
-          <p className="mt-5 font-bricolage text-[32px] font-bold leading-none text-white md:text-[36px]">
+          <p className="mt-5 font-bricolage text-[28px] font-bold leading-none text-white min-[375px]:text-[30px] md:text-[36px]">
             {tier.price}
             {tier.period && (
               <span className="text-base font-medium text-white/65">
@@ -113,7 +113,7 @@ const PricingSection = () => {
       id="pricing"
       className="relative w-full overflow-x-clip bg-[#1B0002] py-16 md:py-20 lg:py-24"
     >
-      <div className="mx-auto max-w-[1100px] px-4 sm:px-6">
+      <div className="mx-auto max-w-[1100px] px-3 min-[375px]:px-4 sm:px-6">
         <div className="text-center">
           <div className="mb-5 flex justify-center">
             <span className="inline-flex h-[34px] items-center justify-center rounded-full border border-[#FF7782] px-5 text-[10px] font-medium uppercase tracking-wide text-white">
@@ -121,7 +121,7 @@ const PricingSection = () => {
             </span>
           </div>
 
-          <h2 className="font-bricolage text-[28px] font-extrabold leading-tight text-white sm:text-[34px] md:text-[40px]">
+          <h2 className="font-bricolage text-[24px] font-extrabold leading-tight text-white min-[375px]:text-[26px] min-[425px]:text-[28px] sm:text-[34px] md:text-[40px]">
             {pricingIntro.titleBefore}{" "}
             <span className="text-[#FF7782]">{pricingIntro.titleHighlight}</span>
           </h2>

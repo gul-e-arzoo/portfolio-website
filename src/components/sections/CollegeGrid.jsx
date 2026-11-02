@@ -32,6 +32,13 @@ const COLLAPSED_HEIGHT =
 const EXPANDED_HEIGHT =
   "h-245 md:h-280 lg:h-260 xl:h-280 transition-[height] duration-500 ease-out";
 
+const COL_WIDTH_CLASS = {
+  col1: "w-[42vw] max-w-[200px] shrink-0 sm:w-[220px] lg:w-auto lg:max-w-none lg:min-w-[365px] lg:flex-[365]",
+  col2: "w-[38vw] max-w-[180px] shrink-0 sm:w-[200px] lg:w-auto lg:max-w-none lg:min-w-[216px] lg:flex-[216]",
+  col3: "hidden min-[400px]:block w-[40vw] max-w-[190px] shrink-0 sm:w-[210px] lg:w-auto lg:max-w-none lg:min-w-[315px] lg:flex-[315]",
+  col4: "hidden lg:block lg:min-w-[532px] lg:flex-[532]",
+};
+
 const LoopColumn = ({
   items,
   colKey,
@@ -42,13 +49,11 @@ const LoopColumn = ({
   const animClass =
     direction === "down" ? "animate-marquee-down" : "animate-marquee-up";
 
-  const { w } = SIZES[colKey];
   const heightClass = expanded ? EXPANDED_HEIGHT : COLLAPSED_HEIGHT;
 
   return (
     <div
-      className="relative overflow-hidden"
-      style={{ flex: w, minWidth: `${w}px` }}
+      className={`relative overflow-hidden ${COL_WIDTH_CLASS[colKey] ?? ""}`}
     >
       <div className={`${heightClass} overflow-hidden w-full`}>
         <div
@@ -119,7 +124,7 @@ const CollageGrid = () => {
   }, []);
 
   return (
-    <section className="w-full bg-[#1B0002] overflow-hidden ">
+    <section className="w-full overflow-x-clip bg-[#1B0002]">
       <div className="mx-auto w-full ">
         <AnimatedContainer animationType="fade-up" delay={0.2}>
           <div className="absolute -left-2499.75 -top-2499.75 opacity-0 pointer-events-none">
@@ -145,7 +150,7 @@ const CollageGrid = () => {
             </div>
           </div>
 
-          <div className="flex gap-2 w-full overflow-x-auto lg:overflow-hidden">
+          <div className="no-scrollbar flex w-full max-w-full gap-2 overflow-x-auto overscroll-x-contain lg:overflow-hidden">
             <LoopColumn
               items={col1}
               colKey="col1"

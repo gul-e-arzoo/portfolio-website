@@ -13,10 +13,10 @@ import AnimatedContainer from "@/components/ui/AnimatedContainer";
 const GALLERY_PREVIEW_COUNT = 6;
 const IMAGES_PER_ROW = 3;
 const GALLERY_TILE_WIDTH =
-  "w-[min(88vw,280px)] shrink-0 sm:w-[300px] md:w-[340px] lg:w-[360px]";
+  "w-[min(72vw,210px)] shrink-0 min-[375px]:w-[min(78vw,240px)] min-[425px]:w-[min(82vw,260px)] sm:w-[280px] md:w-[320px] lg:w-[360px]";
 
 const toggleButtonClass =
-  "rounded-full border border-[#FF7782] bg-transparent px-8 py-3 text-[11px] font-semibold text-white transition-all duration-200 hover:bg-[#FF7782] hover:text-[#1B0002] sm:text-xs";
+  "rounded-full border border-[#FF7782] bg-transparent px-5 py-2.5 text-[10px] font-semibold text-white transition-all duration-200 hover:bg-[#FF7782] hover:text-[#1B0002] min-[375px]:px-6 min-[375px]:py-3 min-[375px]:text-[11px] sm:px-8 sm:text-xs";
 
 const LINKEDIN_BANNER_MAX_H = 220;
 
@@ -35,7 +35,7 @@ function GalleryGridTile({ item, isLinkedInTab, layout = "marquee" }) {
   if (isBanner) {
     return (
       <div
-        className={`group flex h-[150px] items-center justify-center overflow-hidden rounded-sm bg-white leading-none shadow-[0_2px_12px_rgba(0,0,0,0.1)] sm:h-[168px] md:h-[178px] ${widthClass}`}
+        className={`group flex h-[130px] items-center justify-center overflow-hidden rounded-sm bg-white leading-none shadow-[0_2px_12px_rgba(0,0,0,0.1)] min-[375px]:h-[150px] sm:h-[168px] md:h-[178px] ${widthClass}`}
       >
         <Image
           src={item.src}
@@ -69,7 +69,7 @@ function GalleryMarqueeRow({ items, rowKey, durationSec, isLinkedInTab }) {
   const loopItems = [...items, ...items];
 
   return (
-    <div className="portfolio-gallery-marquee relative overflow-hidden">
+    <div className="portfolio-gallery-marquee relative overflow-x-clip">
       <div
         className="pointer-events-none absolute inset-y-0 left-0 z-10 w-10 bg-gradient-to-r from-[#1B0002] to-transparent sm:w-16"
         aria-hidden
@@ -156,10 +156,10 @@ const Designs = () => {
       ========================================================== */}
       <section
         id="portfolio"
-        className="relative w-full overflow-hidden bg-[#1B0002] pt-20 pb-14 md:pt-24 md:pb-16 lg:pt-28 lg:pb-20"
+        className="relative w-full overflow-x-clip bg-[#1B0002] pb-14 pt-16 min-[375px]:pt-20 md:pb-16 md:pt-24 lg:pb-20 lg:pt-28"
       >
         {/* Header */}
-        <div className="mx-auto w-full max-w-[1120px] px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-[1120px] px-3 min-[375px]:px-4 sm:px-6 lg:px-8">
           <AnimatedContainer animationType="fade-up">
             <div className="mx-auto max-w-[850px] text-center">
               {/* Label */}
@@ -170,7 +170,7 @@ const Designs = () => {
               </div>
 
               {/* Heading */}
-              <h2 className="text-[30px] font-bold leading-[1.08] tracking-[-0.04em] text-white sm:text-[38px] md:text-[44px] lg:text-[48px]">
+              <h2 className="text-[26px] font-bold leading-[1.08] tracking-[-0.04em] text-white min-[375px]:text-[30px] sm:text-[38px] md:text-[44px] lg:text-[48px]">
                 Real profiles. Real people.{" "}
                 <span className="text-[#FF7782]">Real results.</span>
                 <br />
@@ -292,7 +292,7 @@ const Designs = () => {
                 </span>
               </div>
 
-              <h2 className="text-[29px] font-bold leading-[1.05] tracking-[-0.04em] text-white sm:text-[36px] md:text-[42px]">
+              <h2 className="text-[24px] font-bold leading-[1.08] tracking-[-0.04em] text-white min-[375px]:text-[27px] min-[425px]:text-[29px] sm:text-[36px] md:text-[42px]">
                 Explore our latest
                 <br />
                 <span className="text-[#FF7782]">Profile Revamp</span> designs

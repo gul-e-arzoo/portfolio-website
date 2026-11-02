@@ -52,17 +52,22 @@ export const metadata = {
   title: "Gul e Arzoo | Premium LinkedIn Brand Design",
   description:
     "Premium LinkedIn profile optimization, branding, and content design for coaches and founders.",
+  icons: {
+    icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
+    shortcut: [{ url: "/logo.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/logo.svg", type: "image/svg+xml" }],
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${bricolageGrotesque.variable} ${playfairDisplay.variable} ${helveticaNeue.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${bricolageGrotesque.variable} ${playfairDisplay.variable} ${helveticaNeue.variable} h-full overflow-x-clip antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#1B0002] text-white">
+      <body className="flex min-h-full min-w-0 flex-col overflow-x-clip bg-[#1B0002] text-white">
         <Navbar />
-        {children}
+        <main className="min-w-0 flex-1">{children}</main>
         <Footer />
       </body>
     </html>

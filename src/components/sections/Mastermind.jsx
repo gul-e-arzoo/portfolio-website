@@ -14,27 +14,27 @@ const Mastermind = () => {
         className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-auto w-full"
         style={{ width: "100%", height: "auto" }}
       />
-      <div className="max-w-360 px-8 py-16 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-        <div className="w-full order-2 lg:order-1">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white">
+      <div className="mx-auto grid w-full max-w-360 grid-cols-1 items-center gap-8 px-4 py-12 min-[375px]:px-6 sm:px-8 sm:py-16 lg:grid-cols-2 lg:gap-10">
+        <div className="order-2 w-full lg:order-1">
+          <h1 className="text-2xl font-bold text-white min-[375px]:text-3xl sm:text-4xl md:text-5xl">
             Meet the{" "}
             <span className="text-[#FF7782] italic">mastermind</span>
           </h1>
 
-          <p className="text-lg sm:text-xl text-white py-5">
+          <p className="py-4 text-base text-white min-[375px]:py-5 min-[375px]:text-lg sm:text-xl">
             Hi, I&apos;m Gul e Arzoo. I&apos;m a LinkedIn Visibility Designer
             and personal branding specialist with 3+ years of experience helping
             career coaches show up powerfully on LinkedIn.
           </p>
 
-          <p className="text-lg sm:text-xl text-white py-5">
+          <p className="py-4 text-base text-white min-[375px]:py-5 min-[375px]:text-lg sm:text-xl">
             I&apos;ve generated millions of impressions for my clients, helped
             25+ coaches and founders build brands that actually attract
             opportunities — and I do it all through intentional design, sharp
             strategy, and content that converts.
           </p>
 
-          <p className="text-lg sm:text-xl text-white py-5">
+          <p className="py-4 text-base text-white min-[375px]:py-5 min-[375px]:text-lg sm:text-xl">
             When I&apos;m not designing, you&apos;ll find me exploring new
             ideas, mentoring others, or spending quality time with my family.
           </p>
@@ -43,7 +43,7 @@ const Mastermind = () => {
             Find Me on:
           </h3>
 
-          <div className="relative flex flex-wrap sm:flex-nowrap gap-3 mt-5 z-20">
+          <div className="relative z-20 mt-5 flex flex-col gap-2 min-[425px]:flex-row min-[425px]:flex-wrap sm:flex-nowrap sm:gap-3">
             <Button
               href="https://www.linkedin.com/in/visibilitydesignerforcoaches/"
               target="_blank"

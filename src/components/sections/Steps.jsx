@@ -69,9 +69,9 @@ const Steps = () => {
   return (
     <section
       id="services"
-      className="relative w-full overflow-hidden bg-[#1B0002] py-20 md:py-24 lg:py-28"
+      className="relative w-full overflow-x-clip bg-[#1B0002] py-14 min-[375px]:py-20 md:py-24 lg:py-28"
     >
-      <div className="relative z-10 mx-auto w-full max-w-[1040px] px-4 sm:px-6">
+      <div className="relative z-10 mx-auto w-full max-w-[1040px] px-3 min-[375px]:px-4 sm:px-6">
         {/* Header */}
         <AnimatedContainer animationType="fade-up">
           <div className="mx-auto text-center">
@@ -83,7 +83,7 @@ const Steps = () => {
             </div>
 
             {/* Heading */}
-            <h2 className="mx-auto text-[32px] font-bold leading-[1.08] tracking-[-0.04em] text-white sm:text-[38px] md:text-[43px] lg:text-[46px]">
+            <h2 className="mx-auto text-[26px] font-bold leading-[1.1] tracking-[-0.04em] text-white min-[375px]:text-[30px] min-[425px]:text-[32px] sm:text-[38px] md:text-[43px] lg:text-[46px]">
               Four ways to make your
               <br />
               <span className="text-[#FF7782]">LinkedIn brand</span>{" "}

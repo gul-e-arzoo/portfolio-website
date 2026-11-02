@@ -41,9 +41,9 @@ const Products = () => {
   return (
     <section
       id="pricing"
-      className="relative w-full overflow-hidden bg-[#1B0002] py-20 md:py-24 lg:py-28"
+      className="relative w-full overflow-x-clip bg-[#1B0002] py-14 min-[375px]:py-20 md:py-24 lg:py-28"
     >
-      <div className="relative z-10 mx-auto w-full max-w-[1120px] px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-[1120px] px-3 min-[375px]:px-4 sm:px-6 lg:px-8">
         {/* ================================
             HEADER
         ================================= */}
@@ -55,7 +55,7 @@ const Products = () => {
               </span>
             </div>
 
-            <h2 className="text-[34px] font-bold leading-[1.05] tracking-[-0.045em] text-white sm:text-[40px] md:text-[46px] lg:text-[48px]">
+            <h2 className="text-[26px] font-bold leading-[1.08] tracking-[-0.045em] text-white min-[375px]:text-[30px] min-[425px]:text-[34px] sm:text-[40px] md:text-[46px] lg:text-[48px]">
               Design like you have a
               <br />
               <span className="text-[#FF7782]">designer</span>

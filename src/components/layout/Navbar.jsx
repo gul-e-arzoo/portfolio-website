@@ -65,8 +65,8 @@ function ChatAvatar({ size = "md" }) {
   );
 }
 
-const chatPillClass =
-  "inline-flex cursor-pointer items-center gap-2.5 rounded-full bg-[#FF7782] py-1.5 pl-1.5 pr-5 font-semibold text-[#1B0002] shadow-[0_7px_22px_rgba(255,119,130,0.22)] transition-all duration-200 hover:bg-[#ff6875] hover:shadow-[0_10px_28px_rgba(255,119,130,0.28)]";
+const chatPillBase =
+  "cursor-pointer items-center gap-2 rounded-full bg-[#FF7782] font-semibold text-[#1B0002] shadow-[0_7px_22px_rgba(255,119,130,0.22)] transition-all duration-200 hover:bg-[#ff6875] hover:shadow-[0_10px_28px_rgba(255,119,130,0.28)] min-[375px]:gap-2.5 lg:gap-2.5 lg:py-1.5 lg:pl-1.5 lg:pr-5 lg:hover:-translate-y-px";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -96,6 +96,15 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+  }, []);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(min-width: 768px)");
+    const onChange = () => {
+      if (mq.matches) setMenuOpen(false);
+    };
+    mq.addEventListener("change", onChange);
+    return () => mq.removeEventListener("change", onChange);
   }, []);
 
   const handleNavClick = (link) => {
@@ -128,38 +137,38 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed left-0 top-0 z-[100] w-full transition-all duration-300 ${
+      className={`fixed left-0 top-0 z-[100] w-full max-w-[100vw] overflow-x-clip transition-all duration-300 ${
         isScrolled
           ? "border-b border-white/10 bg-[#170002]/90 py-2 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-xl"
           : "bg-transparent py-4"
       }`}
     >
-      {/* Main Navbar */}
-      <div className="relative mx-auto flex w-full max-w-[1440px] items-center px-4 sm:px-6 lg:px-8">
+      {/* Main Navbar — equal side columns on md+ keep pill nav centered */}
+      <div className="relative mx-auto grid w-full max-w-[1440px] grid-cols-[minmax(0,1fr)_auto] items-center gap-x-2 px-3 min-[375px]:px-4 sm:px-6 md:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:px-8">
         {/* =========================================
             LEFT - LOGO / PROFILE
         ========================================== */}
         <Link
           href="/"
-          className="z-10 flex min-w-0 shrink-0 items-center gap-3"
+          className="z-10 col-start-1 row-start-1 flex min-w-0 items-center gap-3 justify-self-start"
         >
           <div className="relative shrink-0">
             <Image
               src="/logo.svg"
               width={48}
               height={48}
-              className="size-11 rounded-full border-2 border-[#FF7782] object-cover md:size-12"
+              className="size-9 rounded-full border-2 border-[#FF7782] object-cover min-[375px]:size-10 md:size-12"
               alt="Gul e Arzoo"
               priority
             />
           </div>
 
-          <div className="hidden min-w-0 leading-tight sm:block">
-            <h1 className="whitespace-nowrap text-base font-bold text-white md:text-lg">
+          <div className="hidden min-w-0 leading-tight lg:block">
+            <h1 className="whitespace-nowrap text-base font-bold text-white xl:text-lg">
               Gul e Arzoo
             </h1>
 
-            <p className="mt-0.5 whitespace-nowrap text-xs text-white/65 md:text-[13px]">
+            <p className="mt-0.5 whitespace-nowrap text-xs text-white/65 xl:text-[13px]">
               Visibility & Content Designer
             </p>
           </div>
@@ -168,13 +177,13 @@ const Navbar = () => {
         {/* =========================================
             CENTER - DESKTOP NAVIGATION
         ========================================== */}
-        <ul className="absolute left-1/2 z-20 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-[#5B252A] bg-[#29070A] p-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_8px_30px_rgba(0,0,0,0.25)] lg:flex">
+        <ul className="z-20 row-start-1 hidden min-w-0 max-w-full items-center justify-self-center gap-0.5 rounded-full border border-[#5B252A] bg-[#29070A] p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_8px_30px_rgba(0,0,0,0.25)] md:col-start-2 md:col-end-3 md:flex md:gap-1 md:p-1.5 lg:gap-1">
           {navLinks.map((link) => (
             <li key={link.id}>
               <button
                 type="button"
                 onClick={() => handleNavClick(link)}
-                className={`cursor-pointer whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 xl:px-5 ${
+                className={`cursor-pointer whitespace-nowrap rounded-full px-2.5 py-1.5 text-[11px] font-medium transition-all duration-200 md:px-3 md:py-1.5 md:text-xs lg:px-4 lg:py-2 lg:text-sm xl:px-5 ${
                   active === link.label
                     ? "bg-[#FF7782] text-[#1B0002] shadow-[0_4px_12px_rgba(255,119,130,0.18)]"
                     : "text-white/90 hover:bg-[#FF7782]/15 hover:text-white"
@@ -186,39 +195,30 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Right: Chat (all screens) + menu toggle (mobile/tablet only) */}
-        <div className="z-10 ml-auto flex shrink-0 items-center gap-2 sm:gap-2.5">
-          {/* Mobile & tablet — compact chat pill */}
+        {/* Right: chat + hamburger (phones) */}
+        <div className="z-10 col-start-2 row-start-1 flex min-w-0 items-center justify-self-end gap-1.5 min-[375px]:gap-2 sm:gap-2.5 md:col-start-3 md:col-end-4">
           <a
             href={scheduleCallHref}
             target="_blank"
             rel="noopener noreferrer"
-            className={`${chatPillClass} pr-3 sm:pr-4 lg:hidden`}
+            className={`${chatPillBase} inline-flex min-w-0 max-w-[min(100%,9.5rem)] shrink py-1 pl-1 pr-2.5 min-[425px]:max-w-none min-[425px]:pr-3 md:max-w-none lg:pr-6 xl:pr-6`}
+            aria-label="Chat with Gul-e-Arzoo on WhatsApp"
           >
             <ChatAvatar size="sm" />
-            <span className="whitespace-nowrap text-[11px] leading-tight sm:text-[13px]">
-              <span className="sm:hidden">Chat</span>
-              <span className="hidden sm:inline">Chat with Gul e Arzoo</span>
+            <span className="min-w-0 text-[10px] font-semibold leading-tight min-[375px]:text-[11px] lg:text-[13px] lg:whitespace-nowrap xl:text-sm">
+              <span className="inline min-[425px]:hidden md:inline lg:hidden">
+                Chat
+              </span>
+              <span className="hidden min-[425px]:inline md:hidden lg:inline lg:whitespace-nowrap">
+                Chat with Gul-e-Arzoo
+              </span>
             </span>
           </a>
 
-          {/* Desktop — full chat pill */}
-          <a
-            href={scheduleCallHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${chatPillClass} hidden hover:-translate-y-px lg:inline-flex xl:pr-6`}
-          >
-            <ChatAvatar size="md" />
-            <span className="whitespace-nowrap text-[13px] leading-tight xl:text-sm">
-              Chat with Gul e Arzoo
-            </span>
-          </a>
-
-          {/* ☰ opens Services / Pricing / etc. on small screens (center nav is hidden) */}
+          {/* ☰ — phones only; tablet+ uses center pill nav */}
           <button
             type="button"
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#5B252A] bg-[#29070A] text-xl text-white transition-all duration-200 hover:bg-[#3A0B0F] lg:hidden"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#5B252A] bg-[#29070A] text-xl text-white transition-all duration-200 hover:bg-[#3A0B0F] md:hidden"
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label="Open site menu"
             aria-expanded={menuOpen}
@@ -232,7 +232,7 @@ const Navbar = () => {
           MOBILE NAVIGATION MENU
       ========================================== */}
       {menuOpen && (
-        <div className="absolute left-0 top-full z-50 w-full border-t border-white/10 bg-[#170002]/98 shadow-[0_20px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl lg:hidden">
+        <div className="absolute left-0 top-full z-50 w-full border-t border-white/10 bg-[#170002]/98 shadow-[0_20px_40px_rgba(0,0,0,0.35)] backdrop-blur-2xl md:hidden">
           <div className="mx-auto max-w-[600px] px-4">
             <ul className="flex flex-col gap-2 py-5">
               {navLinks.map((link) => (
@@ -257,10 +257,10 @@ const Navbar = () => {
                   href={scheduleCallHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`${chatPillClass} w-full justify-center px-4 py-2.5`}
+                  className={`${chatPillBase} inline-flex w-full justify-center px-4 py-2.5`}
                 >
                   <ChatAvatar size="lg" />
-                  <span>Chat with Gul e Arzoo</span>
+                  <span>Chat with Gul-e-Arzoo</span>
                 </a>
               </li>
             </ul>

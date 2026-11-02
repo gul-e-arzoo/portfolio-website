@@ -81,11 +81,11 @@ export const Review = () => {
   return (
     <section
       id="featured-testimonials"
-      className="relative w-full overflow-hidden bg-[#1B0002] py-20 md:py-24 lg:py-28"
+      className="relative w-full overflow-x-clip bg-[#1B0002] py-14 min-[375px]:py-20 md:py-24 lg:py-28"
     >
       <div className="pointer-events-none absolute left-1/2 top-[56%] h-[650px] w-[950px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7A252D]/20 blur-[150px]" />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1180px] px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto w-full max-w-[1180px] px-3 min-[375px]:px-4 sm:px-6 lg:px-8">
         <div className="mx-auto mb-10 max-w-[800px] text-center md:mb-12">
           <div className="mb-4 flex justify-center">
             <span className="inline-flex items-center justify-center rounded-full border border-[#FF7782]/80 px-5 py-1.5 text-[10px] font-medium uppercase tracking-wide text-white">
@@ -93,7 +93,7 @@ export const Review = () => {
             </span>
           </div>
 
-          <h2 className="text-[34px] font-bold leading-[1.05] tracking-[-0.045em] text-white sm:text-[42px] md:text-[50px] lg:text-[56px]">
+          <h2 className="text-[26px] font-bold leading-[1.08] tracking-[-0.045em] text-white min-[375px]:text-[30px] sm:text-[42px] md:text-[50px] lg:text-[56px]">
             Don&apos;t Take My Word For It.
             <br />
             Take <span className="text-[#FF7782]">Theirs.</span>
@@ -107,9 +107,9 @@ export const Review = () => {
         <div className="relative mx-auto w-full max-w-[1040px] overflow-hidden rounded-[28px] border border-[#FF7782] bg-[#390D11]/90">
           <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,119,130,0.035),transparent_65%)]" />
 
-          <div className="relative grid min-h-[500px] grid-cols-1 lg:grid-cols-[42%_58%]">
+          <div className="relative grid min-h-0 grid-cols-1 lg:min-h-[500px] lg:grid-cols-[42%_58%]">
             {/* Left — Client Reviews */}
-            <div className="relative px-6 py-8 sm:px-9 sm:py-10 lg:px-12 lg:py-14">
+            <div className="relative px-4 py-6 min-[375px]:px-6 min-[375px]:py-8 sm:px-9 sm:py-10 lg:px-12 lg:py-14">
               <h3 className="relative z-20 text-lg font-bold text-white sm:text-xl">
                 Client Reviews
               </h3>
@@ -200,7 +200,7 @@ export const Review = () => {
                 })}
               </div>
 
-              <div className="mt-7 flex gap-3 overflow-x-auto pb-3 lg:hidden">
+              <div className="no-scrollbar mt-7 flex gap-2 overflow-x-auto pb-3 min-[375px]:gap-3 lg:hidden">
                 {reviews.map((testimonial, index) => {
                   const isActive = activeIndex === index;
                   return (
@@ -210,7 +210,7 @@ export const Review = () => {
                       onClick={() => {
                         goToIndex(index, index > activeIndex ? 1 : -1);
                       }}
-                      className={`flex min-w-[220px] shrink-0 items-center gap-3 rounded-xl px-3 py-3 text-left transition-all duration-500 ${
+                      className={`flex min-w-[min(72vw,200px)] shrink-0 items-center gap-2 rounded-xl px-2.5 py-2.5 text-left transition-all duration-500 min-[375px]:min-w-[200px] min-[375px]:gap-3 min-[375px]:px-3 min-[375px]:py-3 ${
                         isActive ? "bg-[#FF7782]" : "bg-[#7E353C] opacity-55"
                       }`}
                     >
@@ -277,7 +277,7 @@ export const Review = () => {
                       initial={{ opacity: 0, scale: 0.88 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.06, duration: 0.35 }}
-                      className="inline-block font-serif text-[90px] font-bold leading-[0.5] text-[#FF7782]"
+                      className="inline-block font-serif text-[52px] font-bold leading-[0.5] text-[#FF7782] min-[375px]:text-[68px] sm:text-[90px]"
                     >
                       &ldquo;
                     </motion.span>

@@ -69,7 +69,7 @@ const Footer = () => {
         <div className="absolute inset-y-0 left-0 w-1/3 bg-linear-to-r from-[#1B0002] to-transparent z-10" />
       </div>
 
-      <div className="relative z-10 max-w-360 mx-auto border-t border-[#FF7782]/5 px-6 md:px-12 pb-6 pt-12 md:pt-16 h-full flex flex-col justify-between">
+      <div className="relative z-10 mx-auto flex h-full max-w-360 flex-col justify-between border-t border-[#FF7782]/5 px-4 pb-6 pt-10 min-[375px]:px-6 min-[375px]:pt-12 md:px-12 md:pt-16">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 ">
           <div className="flex items-center gap-4">
             <div className="relative group">
@@ -98,7 +98,7 @@ const Footer = () => {
         {/* Middle Section: Newsletter */}
         <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-20 mt-12 mb-16">
           <div className="flex-1 max-w-xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
+            <h2 className="mb-4 text-2xl font-bold leading-tight text-white min-[375px]:text-3xl md:text-4xl lg:text-5xl">
               Get 10 free Infographic templates for LinkedIn
             </h2>
 
@@ -117,7 +117,7 @@ const Footer = () => {
 
               <button
                 type="submit"
-                className="bg-[#FF7782] hover:bg-[#ff5f6c] transition-colors duration-300 px-6 py-4 text-white text-sm font-semibold flex items-center justify-center gap-2 whitespace-nowrap"
+                className="flex items-center justify-center gap-2 bg-[#FF7782] px-5 py-4 text-sm font-semibold text-white transition-colors duration-300 hover:bg-[#ff5f6c] sm:whitespace-nowrap"
               >
                 Get templates
               </button>

@@ -20,14 +20,14 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative w-full overflow-hidden bg-[#1B0002] pt-28 md:pt-32"
+      className="relative w-full overflow-x-clip bg-[#1B0002] pt-24 min-[375px]:pt-28 md:pt-32"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_20%_30%,rgba(255,119,130,0.12),transparent_65%)]"
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto max-w-[1280px] px-3 min-[375px]:px-4 sm:px-6 lg:px-8">
         <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,42%)] lg:gap-6 xl:grid-cols-[minmax(0,1fr)_460px]">
           <div className="pb-8 lg:pb-14">
             <div className="mb-6 sm:mb-8">
@@ -41,7 +41,7 @@ const HeroSection = () => {
               />
             </div>
 
-            <h1 className="max-w-[640px] font-bricolage text-[32px] font-bold leading-[1.08] tracking-[-0.03em] text-[#fff1f3] sm:text-[40px] md:text-[48px] lg:text-[52px]">
+            <h1 className="max-w-[640px] font-bricolage text-[26px] font-bold leading-[1.1] tracking-[-0.03em] text-[#fff1f3] min-[375px]:text-[30px] min-[425px]:text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px]">
               You&apos;re visible on LinkedIn.{" "}
               <span className="text-[#FF7782]">So where are the leads?</span>
             </h1>
@@ -52,7 +52,7 @@ const HeroSection = () => {
               to trusting, to booking you in 90 days.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3 sm:mt-10 sm:gap-4">
+            <div className="mt-8 flex flex-col gap-3 min-[425px]:flex-row min-[425px]:flex-wrap min-[425px]:items-center sm:mt-10 sm:gap-4">
               <a
                 href={scheduleCallHref}
                 target="_blank"
@@ -98,13 +98,13 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 border-t border-[#FF7782]/15 bg-[#29070A]">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-2 divide-x divide-white/10 md:grid-cols-4">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-1 divide-y divide-white/10 min-[400px]:grid-cols-2 min-[400px]:divide-x min-[400px]:divide-y-0 md:grid-cols-4">
           {landingHeroStats.map((item) => (
             <div
               key={item.label}
-              className="flex flex-col items-center justify-center px-4 py-8 text-center sm:py-10"
+              className="flex flex-col items-center justify-center px-2 py-6 text-center min-[375px]:px-4 min-[375px]:py-8 sm:py-10"
             >
-              <span className="font-bricolage text-2xl font-bold text-[#FF7782] sm:text-[28px] md:text-[32px]">
+              <span className="font-bricolage text-xl font-bold text-[#FF7782] min-[375px]:text-2xl sm:text-[28px] md:text-[32px]">
                 {item.value}
               </span>
               <span className="mt-1.5 text-xs text-white/70 sm:text-sm">

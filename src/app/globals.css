@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+html {
+  overflow-x: clip;
+  max-width: 100%;
+}
+
 @theme {
   --font-sans: var(--font-bricolage-grotesque), sans-serif;
   --font-bricolage: var(--font-bricolage-grotesque), sans-serif;

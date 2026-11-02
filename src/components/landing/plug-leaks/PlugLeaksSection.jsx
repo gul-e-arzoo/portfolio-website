@@ -78,7 +78,7 @@ const PlugLeaksSection = () => {
         aria-hidden
       />
 
-      <div className="relative z-10 mx-auto grid max-w-[1280px] items-start gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)] lg:gap-14 xl:grid-cols-[1fr_480px] lg:px-8">
+      <div className="relative z-10 mx-auto grid max-w-[1280px] items-start gap-10 px-3 min-[375px]:gap-12 min-[375px]:px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)] lg:gap-14 xl:grid-cols-[1fr_480px] lg:px-8">
         <div className="lg:pt-2">
           <div className="mb-5 flex justify-start">
             <span className="inline-flex h-[34px] items-center justify-center rounded-full border border-[#FF7782] px-5 text-[10px] font-medium uppercase tracking-wide text-white">
@@ -86,7 +86,7 @@ const PlugLeaksSection = () => {
             </span>
           </div>
 
-          <h2 className="font-bricolage text-[32px] font-bold leading-[1.08] tracking-[-0.03em] text-white sm:text-[38px] md:text-[44px] lg:text-[48px]">
+          <h2 className="font-bricolage text-[26px] font-bold leading-[1.1] tracking-[-0.03em] text-white min-[375px]:text-[28px] min-[425px]:text-[32px] sm:text-[38px] md:text-[44px] lg:text-[48px]">
             {plugLeaksIntro.titleLine1}
             <br />
             <span className="text-[#FF7782]">{plugLeaksIntro.titleLine2}</span>

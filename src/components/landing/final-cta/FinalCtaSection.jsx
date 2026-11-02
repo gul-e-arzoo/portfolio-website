@@ -15,7 +15,7 @@ const FinalCtaSection = () => {
         aria-hidden
       />
 
-      <div className="relative mx-auto max-w-[720px] px-4 sm:px-6">
+      <div className="relative mx-auto max-w-[720px] px-3 min-[375px]:px-4 sm:px-6">
         <div className="relative isolate">
           <div
             aria-hidden
@@ -27,7 +27,7 @@ const FinalCtaSection = () => {
           />
 
           <div
-            className="relative z-10 overflow-hidden rounded-2xl border border-[#FF7782]/55 px-6 py-12 text-center shadow-[0_0_0_1px_rgba(255,119,130,0.2),0_0_40px_rgba(255,119,130,0.35),0_0_80px_rgba(255,119,130,0.18)] md:px-10 md:py-14"
+            className="relative z-10 overflow-hidden rounded-2xl border border-[#FF7782]/55 px-4 py-10 text-center shadow-[0_0_0_1px_rgba(255,119,130,0.2),0_0_40px_rgba(255,119,130,0.35),0_0_80px_rgba(255,119,130,0.18)] min-[375px]:px-6 min-[375px]:py-12 md:px-10 md:py-14"
             style={{
               backgroundColor: "#431216",
               backgroundImage: cornerGlowBg,
@@ -50,7 +50,7 @@ const FinalCtaSection = () => {
                 height={56}
                 className="mx-auto h-14 w-14 rounded-full border-2 border-[#FF7782] shadow-[0_0_20px_rgba(255,119,130,0.35)]"
               />
-              <h2 className="mt-6 font-bricolage text-2xl font-bold text-white md:text-3xl">
+              <h2 className="mt-6 font-bricolage text-xl font-bold leading-snug text-white min-[375px]:text-2xl md:text-3xl">
                 Ready to take your brand to the next level?
               </h2>
               <p className="mx-auto mt-3 max-w-md text-sm text-white/75">

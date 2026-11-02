@@ -54,9 +54,9 @@ const ProcessSection = () => {
   return (
     <section
       id="process"
-      className="relative w-full bg-[#1B0002] py-16 md:py-20 lg:py-24"
+      className="relative w-full overflow-x-clip bg-[#1B0002] py-14 min-[375px]:py-16 md:py-20 lg:py-24"
     >
-      <div className="mx-auto max-w-[780px] px-4 sm:px-6">
+      <div className="mx-auto max-w-[780px] px-3 min-[375px]:px-4 sm:px-6">
         <div className="text-center">
           <div className="mb-5 flex justify-center">
             <span className="inline-flex h-[34px] min-w-[120px] items-center justify-center rounded-full border border-[#FF7782] px-5 text-[10px] font-medium uppercase tracking-wide text-white">
@@ -64,7 +64,7 @@ const ProcessSection = () => {
             </span>
           </div>
 
-          <h2 className="font-bricolage text-[28px] font-extrabold leading-[1.1] tracking-[-0.03em] text-white sm:text-[34px] md:text-[40px] lg:text-[44px]">
+          <h2 className="font-bricolage text-[24px] font-extrabold leading-[1.12] tracking-[-0.03em] text-white min-[375px]:text-[26px] min-[425px]:text-[28px] sm:text-[34px] md:text-[40px] lg:text-[44px]">
             From{" "}
             <span className="text-[#FF7782]">Zero to Authority</span> in
             <br />

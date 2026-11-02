@@ -26,8 +26,8 @@ const FaqSection = () => {
   const [openId, setOpenId] = useState(landingFaqs[0]?.id ?? null);
 
   return (
-    <section id="faq" className="relative w-full bg-[#1B0002] py-16 md:py-20 lg:py-24">
-      <div className="mx-auto max-w-[720px] px-4 sm:px-6">
+    <section id="faq" className="relative w-full overflow-x-clip bg-[#1B0002] py-14 min-[375px]:py-16 md:py-20 lg:py-24">
+      <div className="mx-auto max-w-[720px] px-3 min-[375px]:px-4 sm:px-6">
         <div className="text-center">
           <div className="mb-5 flex justify-center">
             <span className="inline-flex h-[34px] min-w-[80px] items-center justify-center rounded-full border border-[#FF7782] px-5 text-[10px] font-medium uppercase tracking-wide text-white">
@@ -35,7 +35,7 @@ const FaqSection = () => {
             </span>
           </div>
 
-          <h2 className="font-bricolage text-[28px] font-extrabold leading-tight text-white sm:text-[32px] md:text-[36px]">
+          <h2 className="font-bricolage text-[24px] font-extrabold leading-tight text-white min-[375px]:text-[26px] min-[425px]:text-[28px] sm:text-[32px] md:text-[36px]">
             {faqIntro.title}
           </h2>
 
