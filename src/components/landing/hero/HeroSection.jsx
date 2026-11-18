@@ -30,15 +30,23 @@ const HeroSection = () => {
       <div className="relative z-10 mx-auto max-w-[1280px] px-3 min-[375px]:px-4 sm:px-6 lg:px-8">
         <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,42%)] lg:gap-6 xl:grid-cols-[minmax(0,1fr)_460px]">
           <div className="pb-8 lg:pb-14">
-            <div className="mb-6 sm:mb-8">
+            <div className="mb-6 flex flex-wrap items-center gap-3 sm:mb-8 sm:gap-4">
               <Image
-                src={landingHeroAssets.socialProof}
-                alt="Trusted by 25+ LinkedIn clients, including fractional execs"
-                width={480}
-                height={67}
-                className="h-[52px] w-auto max-w-[min(100%,560px)] object-contain object-left sm:h-[60px] md:h-[67px] lg:h-[72px]"
+                src="/Group.svg"
+                alt=""
+                width={240}
+                height={38}
+                className="h-9 w-auto object-contain md:h-10"
+                style={{ width: "auto", height: "auto" }}
                 priority
               />
+              <p className="flex flex-wrap items-center gap-1.5 text-sm text-white/90 md:text-base">
+                <span>Trusted by</span>
+                <span className="inline-block -rotate-2 rounded-sm bg-gradient-to-r from-[#FF7782] to-[#6B3237] px-1.5 py-0.5 text-xs font-extrabold text-white md:text-sm">
+                  25+
+                </span>
+                <span>LinkedIn clients, including fractional execs</span>
+              </p>
             </div>
 
             <h1 className="max-w-[640px] font-bricolage text-[26px] font-bold leading-[1.1] tracking-[-0.03em] text-[#fff1f3] min-[375px]:text-[30px] min-[425px]:text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px]">

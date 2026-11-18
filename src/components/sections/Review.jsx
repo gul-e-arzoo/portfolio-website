@@ -100,7 +100,7 @@ export const Review = () => {
           </h2>
 
           <p className="mt-5 text-sm text-white/70 md:text-[15px]">
-            Coaches, founders and execs who got seen and got booked.
+            Execs and founders who got seen, got trusted and got hired.
           </p>
         </div>
 

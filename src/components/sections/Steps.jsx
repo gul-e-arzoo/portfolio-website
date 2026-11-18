@@ -8,22 +8,22 @@ import AnimatedContainer from "@/components/ui/AnimatedContainer";
 const services = [
   {
     id: 1,
-    title: "LinkedIn Branding",
-    description: "For people whose profile reads like an old CV.",
+    title: "LinkedIn Profile",
+    description: "For fractional execs whose profile reads like an old CV.",
     icon: "/what_i_do_section/what_i_do_1.png",
     points: [
-      "A headline that says what you do in one line",
-      "A banner made for your niche, not a stock photo",
-      "An About section that sounds like you, not a résumé",
-      "Featured section set up to show proof first",
-      "Colours and photo that match your real brand",
-      "A profile a stranger understands in 10 seconds",
+      "A headline that says who you help and what you fix",
+      "A banner built around your offer, not a stock photo",
+      "An About section that sells your expertise, not your job history",
+      "A Featured section that points founders to a call",
+      "Experience rewritten as results, not duties",
+      "A profile a founder understands in 10 seconds",
     ],
   },
   {
     id: 2,
     title: "Content Design",
-    description: "For people whose good ideas get scrolled past.",
+    description: "For execs whose best ideas get scrolled past.",
     icon: "/what_i_do_section/what_i_do_2.png",
     points: [
       "Carousels people finish instead of skip",
@@ -36,23 +36,23 @@ const services = [
   },
   {
     id: 3,
-    title: "Website and Landing Pages",
-    description: "For people sending warm leads to a weak page.",
+    title: "1:1 Consultation",
+    description: "For execs who want to do it themselves, with a clear plan.",
     icon: "/what_i_do_section/what_i_do_3.png",
     points: [
-      "One page built to turn visitors into booked calls",
-      "Clear offer, clear proof, clear next step",
-      "Loads fast and works on a phone",
-      "Results placed where people actually look",
-      "Booking form wired to your calendar",
-      "Built in Figma, then handed to you or your dev",
+      "One 60-minute video call with me",
+      "A live review of your profile",
+      "Positioning for your fractional offer",
+      "Content ideas founders care about",
+      "A written action list after the call",
+      "You do the work, with no guesswork",
     ],
   },
   {
     id: 4,
     title: "LinkedIn Management",
     description:
-      "For those who know they should post, but never find the time.",
+      "For execs who know they should post, but client work always comes first.",
     icon: "/what_i_do_section/what_i_do_4.png",
     points: [
       "Posts written and designed for you every week",
@@ -86,14 +86,14 @@ const Steps = () => {
             <h2 className="mx-auto text-[26px] font-bold leading-[1.1] tracking-[-0.04em] text-white min-[375px]:text-[30px] min-[425px]:text-[32px] sm:text-[38px] md:text-[43px] lg:text-[46px]">
               Four ways to make your
               <br />
-              <span className="text-[#FF7782]">LinkedIn brand</span>{" "}
-              impossible to miss
+              <span className="text-[#FF7782]">LinkedIn</span> win you
+              contracts
             </h2>
 
             {/* Subtitle */}
             <p className="mx-auto mt-5 max-w-[700px] text-[12px] leading-[1.6] text-white/80 md:text-[13px]">
-              Take one. Or run all four as one system. Either way, you end up
-              easy to find, easy to trust, and easy to hire.
+              Pick one, or run them together as one system. Either way,
+              founders find you, trust you and book a call.
             </p>
           </div>
         </AnimatedContainer>

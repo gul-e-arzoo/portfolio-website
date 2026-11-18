@@ -36,19 +36,19 @@ const Hero = () => {
             <span className="inline-block -rotate-2 rounded-sm bg-gradient-to-r from-[#FF7782] to-[#6B3237] px-1.5 py-0.5 text-xs font-extrabold text-white md:text-sm">
               25+
             </span>
-            <span>Coaches, Founders &amp; Functional Execs</span>
+            <span>LinkedIn clients, including fractional execs</span>
           </p>
         </div>
 
         <div className="text-center">
           <h1 className="font-bricolage text-[26px] font-bold leading-[1.12] text-[#fff1f3] min-[375px]:text-3xl sm:text-5xl lg:text-[64px]">
-            The{" "}
-            <span className="text-[#FF7782]">Home of Premium</span>
+            Be the{" "}
+            <span className="text-[#FF7782]">fractional exec</span>
           </h1>
 
           <div className="mt-2 flex flex-wrap items-center justify-center gap-2 md:gap-3">
             <span className="font-bricolage text-[26px] font-bold text-[#fff1f3] min-[375px]:text-3xl sm:text-5xl lg:text-[64px]">
-              LinkedIn
+              founders trust on
             </span>
             <Image
               src="/Linkedin.svg"
@@ -59,15 +59,11 @@ const Hero = () => {
               style={{ width: "auto", height: "auto" }}
               priority
             />
-            <span className="font-bricolage text-[26px] font-bold text-[#fff1f3] min-[375px]:text-3xl sm:text-5xl lg:text-[64px]">
-              Brand Design
-            </span>
           </div>
 
           <p className="mx-auto mt-6 max-w-[640px] text-base leading-relaxed text-[#fff1f3]/90 md:mt-8 md:text-lg">
-            I build the profile, the content, and the pages that make coaches,
-            founders and execs easy to find and easy to trust. One roof. One
-            system.
+            I build the profile and the content that make fractional CMOs,
+            CFOs, CTOs and COOs easy to find, easy to trust and easy to hire.
           </p>
         </div>
 
@@ -86,7 +82,7 @@ const Hero = () => {
               className="h-6 w-6 shrink-0"
               style={{ width: "auto", height: "auto" }}
             />
-            Book a free 1:1 call
+            Book my free call
           </a>
 
           <button

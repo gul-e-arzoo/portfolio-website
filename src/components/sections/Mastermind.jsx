@@ -22,21 +22,21 @@ const Mastermind = () => {
           </h1>
 
           <p className="py-4 text-base text-white min-[375px]:py-5 min-[375px]:text-lg sm:text-xl">
-            Hi, I&apos;m Gul e Arzoo. I&apos;m a LinkedIn Visibility Designer
-            and personal branding specialist with 3+ years of experience helping
-            career coaches show up powerfully on LinkedIn.
+            Hi, I&apos;m Gul e Arzoo, a LinkedIn Profile Strategist. I help
+            fractional CMOs, CFOs, CTOs and COOs turn their LinkedIn into a
+            steady source of founder conversations.
           </p>
 
           <p className="py-4 text-base text-white min-[375px]:py-5 min-[375px]:text-lg sm:text-xl">
-            I&apos;ve generated millions of impressions for my clients, helped
-            25+ coaches and founders build brands that actually attract
-            opportunities — and I do it all through intentional design, sharp
-            strategy, and content that converts.
+            I&apos;ve written 800+ posts and worked with 25+ LinkedIn clients.
+            One CTO&apos;s profile I managed reached 2 million impressions and
+            brought his agency a new retainer client. I built my own business
+            the same way: on LinkedIn, one post at a time.
           </p>
 
           <p className="py-4 text-base text-white min-[375px]:py-5 min-[375px]:text-lg sm:text-xl">
-            When I&apos;m not designing, you&apos;ll find me exploring new
-            ideas, mentoring others, or spending quality time with my family.
+            When I&apos;m not writing or designing, I&apos;m teaching others
+            what works, or spending time with my family.
           </p>
 
           <h3 className="  text-lg md:text-xl xl:text-2xl font-medium text-white mt-8">

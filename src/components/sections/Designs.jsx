@@ -179,7 +179,7 @@ const Designs = () => {
 
               {/* Subtitle */}
               <p className="mt-4 text-[11px] leading-relaxed text-white/75 sm:text-xs md:text-[13px]">
-                Every profile below was built from scratch for one person.
+                Every profile below was built from scratch for one person, in their voice.
               </p>
             </div>
           </AnimatedContainer>
@@ -293,15 +293,14 @@ const Designs = () => {
               </div>
 
               <h2 className="text-[24px] font-bold leading-[1.08] tracking-[-0.04em] text-white min-[375px]:text-[27px] min-[425px]:text-[29px] sm:text-[36px] md:text-[42px]">
-                Explore our latest
+                See the full
                 <br />
-                <span className="text-[#FF7782]">Profile Revamp</span> designs
+                <span className="text-[#FF7782]">before and after</span>
               </h2>
 
               <p className="mx-auto mt-4 max-w-[580px] text-[11px] leading-[1.6] text-white/70 sm:text-xs">
-                From visual identity to content design, these brands showcase
-                how strategy and design come together to elevate LinkedIn
-                presence.
+                What each client had, what I changed, and what they said
+                about it. Click any case to see the whole profile.
               </p>
             </div>
           </AnimatedContainer>
