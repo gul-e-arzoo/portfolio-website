@@ -1,64 +1,60 @@
 export const processIntro = {
-  badge: "The process",
+  badge: "The 90-day plan",
   subtitle:
-    "A proven, structured process that transforms you from invisible to unmissable.",
+    "4 steps. Same system for every client. From a profile founders scroll past to one they message.",
 };
 
 export const processPhases = [
   {
     id: 1,
     week: "Week 01",
-    title: "Strategy & Brand Foundation",
+    title: "Clarity",
     description:
-      "We start by getting clear on who you serve, what makes you different, and how your brand should look and sound. No guessing. Just a solid base to build on.",
+      "We get clear on who you help, what you fix and what founders pay you for. Everything else is built on this.",
     points: [
-      "2-hour niche clarity & ICP session",
-      "Offer positioning workshop",
-      "Competitive analysis & differentiation",
-      "Brand personality & voice definition",
-      "Brand colour palette & typography system",
+      "Strategy call on your offer and ideal clients",
+      "Pick the founders you want to reach",
+      "Voice file: your words, stories and opinions",
+      "Review of your current profile and posts",
     ],
   },
   {
     id: 2,
     week: "Week 02",
-    title: "LinkedIn Build",
+    title: "Positioning",
     description:
-      "We rewrite your whole profile and design every visual using your new brand. You go from invisible to impossible to ignore.",
+      "I rewrite and redesign your profile, so a founder knows in 10 seconds why to hire you.",
     points: [
-      "Complete profile copywriting (headline, about, experience)",
-      "Custom banner design",
-      "Featured section strategy & setup",
-      "2 lead magnets created & designed",
-      "Skills optimisation & endorsement strategy",
+      "New headline and About section",
+      "Custom banner in your brand",
+      "Featured section that points to a call",
+      "Experience rewritten as results, not duties",
     ],
   },
   {
     id: 3,
-    week: "Week 03",
-    title: "Content Creation",
+    week: "Weeks 03 to 10",
+    title: "Authority",
     description:
-      "We build your first 60 days of content, so you launch with momentum instead of a blank page. Every post aimed at the people who can hire you.",
+      "I write and design your content every week. Posts that show founders you know their problems.",
     points: [
-      "60-day content calendar & strategy",
-      "15 evergreen posts (written & designed)",
-      "5 carousel posts (fully designed)",
-      "Content templates for future use",
-      "Engagement strategy & guidelines",
+      "Monthly content plan built around your offer",
+      "Posts written in your voice, ready to publish",
+      "Carousels and case studies, fully designed",
+      "You approve once a week. That's it.",
     ],
   },
   {
     id: 4,
-    week: "Week 04",
-    title: "Launch & Support",
+    week: "Weeks 11 to 12",
+    title: "Conversion",
     description:
-      "Your new presence goes live, you get trained on the system, and you're supported for the next 60 days. You're never left to figure it out alone.",
+      "We turn attention into conversations. Then we look at what worked and do more of it.",
     points: [
-      "Profile goes live with new branding",
-      "Content scheduling & automation setup",
-      "Platform training & full documentation",
-      "60 days post-launch support",
-      "Weekly check-in calls (first month), then bi-weekly",
+      "Clear call to action on every key post",
+      "DM scripts for warm founders",
+      "Monthly report: views, followers, inbound",
+      "Plan for the next 90 days",
     ],
   },
 ];

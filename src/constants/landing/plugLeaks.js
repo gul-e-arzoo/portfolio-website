@@ -1,20 +1,20 @@
 export const plugLeaksIntro = {
-  badge: "Two paths, one goal",
-  titleLine1: "Plug the leaks.",
-  titleLine2: "Fill the calendar.",
+  badge: "Two ways to work with me",
+  titleLine1: "Fix the profile.",
+  titleLine2: "Fill the pipeline.",
   description:
-    "If LinkedIn is leaking leads, you don't need more random posts. You need a system that turns the attention you already have into booked conversations.",
+    "You don't need more random posts. You need a profile that sells you while you're busy with clients, and content that brings founders to you.",
   callout:
-    "One is done for you. One is done with you. Both end with a plan that fits how you work.",
+    "One is done for you. One is done with you. Both start with what founders want to see.",
 };
 
 export const plugLeakPaths = [
   {
     id: "ninety-day",
-    badge: "90-Day Program",
+    badge: "90-Day Management",
     title: "Your LinkedIn, run for you",
     description:
-      "Profile, content, and follow-up built and managed in your voice for 90 days — so the right people move from scrolling to trusting to booking you.",
+      "I rebuild your profile and write your content in your voice for 90 days. You stay focused on clients. Founders start finding you.",
     cta: "See the 90-Day Plan",
     ctaType: "scroll",
     scrollTarget: "process",
@@ -22,11 +22,11 @@ export const plugLeakPaths = [
   },
   {
     id: "coaching",
-    badge: "1:1 Coaching",
-    title: "60-Minute Power Hour",
+    badge: "1:1 Consultation",
+    title: "60-minute strategy call",
     description:
-      "One focused session on your profile, offer, or content plan. Walk away with fixes you can ship this week — or hand straight to your team.",
-    cta: "Book your power hour",
+      "One focused call on your profile, positioning or content. You leave with a clear list of fixes to make this week.",
+    cta: "Book your call",
     ctaType: "link",
     featured: false,
   },

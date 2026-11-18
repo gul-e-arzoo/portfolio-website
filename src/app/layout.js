@@ -49,9 +49,9 @@ const helveticaNeue = localFont({
 });
 
 export const metadata = {
-  title: "Gul e Arzoo | Premium LinkedIn Brand Design",
+  title: "Gul e Arzoo | LinkedIn for Fractional Executives",
   description:
-    "Premium LinkedIn profile optimization, branding, and content design for coaches and founders.",
+    "LinkedIn profiles and content for fractional CMOs, CFOs, CTOs and COOs. Turn your LinkedIn into a client pipeline in 90 days.",
   icons: {
     icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
     shortcut: [{ url: "/logo.svg", type: "image/svg+xml" }],

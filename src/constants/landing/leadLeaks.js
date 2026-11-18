@@ -1,32 +1,32 @@
 export const leadLeakCards = [
   {
     id: 1,
-    title: "Leads land. Your profile still reads like a CV.",
+    title: "A founder checks your profile. It reads like a CV.",
     description:
-      "Visitors can't tell what you sell, who you help, or why they should trust you in ten seconds.",
+      "They see job titles and dates. They can't tell what you fix, who you fix it for, or why you're worth a fractional fee.",
   },
   {
     id: 2,
-    title: "You post every week. The right people still don't know you.",
+    title: "Your headline says CMO. So do 50,000 others.",
     description:
-      "Your reach is full of peers and other coaches. Buyers never see you.",
+      "A title alone doesn't win contracts. Founders hire the exec who names their problem in one line.",
   },
   {
     id: 3,
-    title: "Someone warm likes your post. Then nothing happens.",
+    title: "Your clients come from referrals. Then they stop.",
     description:
-      "No comment back, no message, no next step. Warm interest goes cold in a day.",
+      "Referrals arrive in waves. When one contract ends, there's nothing lined up behind it.",
   },
   {
     id: 4,
-    title: "You can't name one client that came from LinkedIn.",
+    title: "You post when you have time. Which is never.",
     description:
-      "Three posts one week, none for a month. LinkedIn forgets you, and so do buyers.",
+      "Client work comes first. Three posts one week, none for a month. Founders forget you.",
   },
   {
     id: 5,
-    title: "You post when you have time. So momentum never builds.",
+    title: "People like your posts. Nobody books a call.",
     description:
-      "Without a rhythm, you're always starting over. Trust never compounds.",
+      "Your reach is full of peers, not founders. And there's no clear next step for the ones who are.",
   },
 ];

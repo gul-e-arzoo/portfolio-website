@@ -4,8 +4,8 @@ export const landingHeroAssets = {
 };
 
 export const landingHeroStats = [
-  { value: "25+", label: "Coaches helped" },
-  { value: "3X", label: "Profile Growth" },
-  { value: "99%", label: "Success Rate" },
-  { value: "90 Days", label: "Results Timeline" },
+  { value: "25+", label: "LinkedIn clients" },
+  { value: "800+", label: "Posts written" },
+  { value: "2M", label: "Impressions for one client" },
+  { value: "90 Days", label: "To a client pipeline" },
 ];

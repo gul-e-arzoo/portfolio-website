@@ -1,10 +1,10 @@
 const PLAN_SECTION = "/home_page/what_this_plan_can_do_section";
 
 export const resultsIntro = {
-  badge: "See what this plan can do",
-  title: "See what this Package can do",
+  badge: "The results",
+  title: "Real numbers from real profiles",
   subtitle:
-    "A proven, structured process that transforms you from invisible to unmissable.",
+    "Screenshots from LinkedIn analytics. No mock-ups, no made-up numbers.",
 };
 
 export const resultsAnalyticsImages = [
@@ -39,10 +39,10 @@ const PACKAGE_REVIEWS = "/home_page/what_this_package_can_do_section";
 
 /** Header above LinkedIn review wall (same as reference) */
 export const packageReviewsIntro = {
-  badge: "See what this plan can do",
-  title: "See what this Package can do",
+  badge: "What clients say",
+  title: "In their own words",
   subtitle:
-    "A proven, structured process that transforms you from invisible to unmissable.",
+    "Reviews from clients and people I've worked with on LinkedIn.",
 };
 
 export const packageReviewImages = Array.from({ length: 13 }, (_, index) => {

@@ -89,7 +89,7 @@ const Footer = () => {
                 Gul e Arzoo
               </h1>
               <p className="text-zinc-400 text-xs md:text-sm mt-0.5">
-                Visibility & Content Designer
+                LinkedIn Profile Strategist
               </p>
             </div>
           </div>

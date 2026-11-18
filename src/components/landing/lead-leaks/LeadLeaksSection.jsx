@@ -47,14 +47,14 @@ const LeadLeaksSection = () => {
           </div>
 
           <h2 className="mx-auto max-w-[640px] font-bricolage text-[24px] font-bold leading-[1.12] tracking-[-0.03em] text-white min-[375px]:text-[26px] min-[425px]:text-[28px] sm:text-[34px] md:text-[40px] lg:text-[44px]">
-            Five places where the
+            Five reasons founders
             <br />
-            <span className="text-[#FF7782]">leads leak out</span>
+            <span className="text-[#FF7782]">scroll past you</span>
           </h2>
 
           <p className="mx-auto mt-5 max-w-[560px] text-[13px] leading-relaxed text-white/75 md:text-sm">
-            It&apos;s rarely the posting. It&apos;s what happens before and
-            after. See which of these is costing you.
+            It&apos;s rarely your skills. It&apos;s how your profile shows
+            them. See which of these is costing you contracts.
           </p>
         </div>
       </div>

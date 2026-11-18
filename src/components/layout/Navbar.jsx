@@ -169,7 +169,7 @@ const Navbar = () => {
             </h1>
 
             <p className="mt-0.5 whitespace-nowrap text-xs text-white/65 xl:text-[13px]">
-              Visibility & Content Designer
+              LinkedIn Profile Strategist
             </p>
           </div>
         </Link>

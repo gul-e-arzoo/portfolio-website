@@ -51,10 +51,10 @@ const FinalCtaSection = () => {
                 className="mx-auto h-14 w-14 rounded-full border-2 border-[#FF7782] shadow-[0_0_20px_rgba(255,119,130,0.35)]"
               />
               <h2 className="mt-6 font-bricolage text-xl font-bold leading-snug text-white min-[375px]:text-2xl md:text-3xl">
-                Ready to take your brand to the next level?
+                Ready for founders to find you first?
               </h2>
               <p className="mx-auto mt-3 max-w-md text-sm text-white/75">
-                Book a free call. We&apos;ll map the leaks and what to fix first.
+                Book a free call. I&apos;ll show you what founders see on your profile, and what to fix first.
               </p>
               <a
                 href={scheduleCallHref}

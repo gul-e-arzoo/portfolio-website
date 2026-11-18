@@ -1,36 +1,44 @@
 export const whoItsForIntro = {
   badge: "Who it's for",
-  titleBefore: "Built for people who are already good. Just",
+  titleBefore: "Built for fractional execs who are great at the work. Just",
   titleHighlight: "not visible",
   titleAfter: "enough.",
   description:
-    "Where Career Coaches, Founders and Creators Become LinkedIn's most visible voice. Profile revamps, content systems, and full LinkedIn management, all under one roof.",
-  callout: "Not for everyone. Built for the right fit.",
+    "Founders check your LinkedIn before they sign. I make sure they see a senior operator who solves their problem, not a job seeker.",
+  callout: "Fractional CMOs, CFOs, CTOs and COOs in the US, UK and Switzerland.",
 };
 
 export const whoItsForAudiences = [
   {
-    id: "founders",
-    title: "Founders",
-    badge: "Raise your profile",
+    id: "cmo",
+    title: "Fractional CMOs",
+    badge: "Win better contracts",
     badgeStyle: "filled",
     description:
-      "Your company has a voice. You don't. So investors, hires and partners find the brand but never the person behind it and people buy the person first.",
+      "You build brands for a living. Your own profile shouldn't be the one that looks unfinished.",
   },
   {
-    id: "coaches",
-    title: "Coaches",
+    id: "cfo",
+    title: "Fractional CFOs",
+    badge: "Get found by founders",
+    badgeStyle: "outline",
+    description:
+      "Founders need you right after a raise. Your profile should be the first one they trust.",
+  },
+  {
+    id: "cto",
+    title: "Fractional CTOs",
+    badge: "Show your thinking",
+    badgeStyle: "outline",
+    description:
+      "Your skills are hard to see from a job title. Content makes them clear to non-technical founders.",
+  },
+  {
+    id: "coo",
+    title: "Fractional COOs",
     badge: "Fill your calendar",
     badgeStyle: "outline",
     description:
-      "You're great in the room and invisible outside it. Referrals bring clients in waves, then go quiet, and there's no steady way for new ones to find you.",
-  },
-  {
-    id: "fractional",
-    title: "Fractional Execs",
-    badge: "Win better contracts",
-    badgeStyle: "outline",
-    description:
-      "Every new contract starts with someone checking your profile. If it still reads like a CV, you look like a job seeker, not the senior operator they're about to pay a premium for.",
+      "You fix how companies run. Your LinkedIn should show the before and after.",
   },
 ];

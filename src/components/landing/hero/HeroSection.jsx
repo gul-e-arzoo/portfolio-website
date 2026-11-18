@@ -33,7 +33,7 @@ const HeroSection = () => {
             <div className="mb-6 sm:mb-8">
               <Image
                 src={landingHeroAssets.socialProof}
-                alt="Trusted by 25+ coaches, founders and functional execs"
+                alt="Trusted by 25+ LinkedIn clients, including fractional execs"
                 width={480}
                 height={67}
                 className="h-[52px] w-auto max-w-[min(100%,560px)] object-contain object-left sm:h-[60px] md:h-[67px] lg:h-[72px]"
@@ -42,14 +42,14 @@ const HeroSection = () => {
             </div>
 
             <h1 className="max-w-[640px] font-bricolage text-[26px] font-bold leading-[1.1] tracking-[-0.03em] text-[#fff1f3] min-[375px]:text-[30px] min-[425px]:text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px]">
-              You&apos;re visible on LinkedIn.{" "}
-              <span className="text-[#FF7782]">So where are the leads?</span>
+              Founders check your LinkedIn before they hire you.{" "}
+              <span className="text-[#FF7782]">What do they see?</span>
             </h1>
 
             <p className="mt-5 max-w-[560px] text-[15px] leading-relaxed text-white/80 md:text-base">
-              Views and likes don&apos;t book calls. A system does. I turn your
-              LinkedIn into a path that takes the right people from scrolling,
-              to trusting, to booking you in 90 days.
+              I help fractional CMOs, CFOs, CTOs and COOs turn their LinkedIn
+              into a client pipeline in 90 days. A clear profile, steady content,
+              and founders who reach out first.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 min-[425px]:flex-row min-[425px]:flex-wrap min-[425px]:items-center sm:mt-10 sm:gap-4">
