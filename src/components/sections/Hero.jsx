@@ -42,13 +42,13 @@ const Hero = () => {
 
         <div className="text-center">
           <h1 className="font-bricolage text-[26px] font-bold leading-[1.12] text-[#fff1f3] min-[375px]:text-3xl sm:text-5xl lg:text-[64px]">
-            Be the{" "}
-            <span className="text-[#FF7782]">fractional exec</span>
+            The{" "}
+            <span className="text-[#FF7782]">Home of Premium</span>
           </h1>
 
           <div className="mt-2 flex flex-wrap items-center justify-center gap-2 md:gap-3">
             <span className="font-bricolage text-[26px] font-bold text-[#fff1f3] min-[375px]:text-3xl sm:text-5xl lg:text-[64px]">
-              founders trust on
+              LinkedIn
             </span>
             <Image
               src="/Linkedin.svg"
@@ -59,6 +59,9 @@ const Hero = () => {
               style={{ width: "auto", height: "auto" }}
               priority
             />
+            <span className="font-bricolage text-[26px] font-bold text-[#fff1f3] min-[375px]:text-3xl sm:text-5xl lg:text-[64px]">
+              Brand Design
+            </span>
           </div>
 
           <p className="mx-auto mt-6 max-w-[640px] text-base leading-relaxed text-[#fff1f3]/90 md:mt-8 md:text-lg">
