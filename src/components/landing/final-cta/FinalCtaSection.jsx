@@ -51,10 +51,10 @@ const FinalCtaSection = () => {
                 className="mx-auto h-14 w-14 rounded-full border-2 border-[#FF7782] shadow-[0_0_20px_rgba(255,119,130,0.35)]"
               />
               <h2 className="mt-6 font-bricolage text-xl font-bold leading-snug text-white min-[375px]:text-2xl md:text-3xl">
-                Ready for founders to find you first?
+                Your next contract starts with your profile.
               </h2>
               <p className="mx-auto mt-3 max-w-md text-sm text-white/75">
-                Book a free call. I&apos;ll show you what founders see on your profile, and what to fix first.
+                Book a free 20-minute call. I&apos;ll look at your profile with you and show you the first 3 things to fix. You don&apos;t commit to anything.
               </p>
               <a
                 href={scheduleCallHref}
@@ -62,8 +62,11 @@ const FinalCtaSection = () => {
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF7782] px-8 py-3.5 text-sm font-semibold text-[#1B0002] shadow-[0_8px_28px_rgba(255,119,130,0.4)] transition-colors hover:bg-[#ff6875]"
               >
-                Book a call
+                Show me what to fix
               </a>
+              <p className="mt-3 text-xs text-white/55">
+                No pitch. No pressure. Just a clear next step.
+              </p>
             </div>
           </div>
         </div>

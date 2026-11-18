@@ -3,7 +3,7 @@ export const pricingIntro = {
   titleBefore: "Pick the level of",
   titleHighlight: "help you need",
   subtitle:
-    "Start with a profile fix or a strategy call. Move to full management when you want it off your plate.",
+    "Start small or hand it all over. Every option begins with a free call, so you never pay for the wrong thing.",
 };
 
 export const pricingTiers = [
@@ -33,7 +33,7 @@ export const pricingTiers = [
     period: "",
     featured: true,
     popularLabel: "Most popular",
-    cta: "Book a Call",
+    cta: "Get my custom plan",
     features: [
       "Full profile rewrite and redesign",
       "Weekly posts written in your voice",

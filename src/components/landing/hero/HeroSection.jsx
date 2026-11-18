@@ -42,14 +42,14 @@ const HeroSection = () => {
             </div>
 
             <h1 className="max-w-[640px] font-bricolage text-[26px] font-bold leading-[1.1] tracking-[-0.03em] text-[#fff1f3] min-[375px]:text-[30px] min-[425px]:text-[32px] sm:text-[40px] md:text-[48px] lg:text-[52px]">
-              Founders check your LinkedIn before they hire you.{" "}
-              <span className="text-[#FF7782]">What do they see?</span>
+              Fractional execs: turn your LinkedIn into a{" "}
+              <span className="text-[#FF7782]">client pipeline in 90 days.</span>
             </h1>
 
             <p className="mt-5 max-w-[560px] text-[15px] leading-relaxed text-white/80 md:text-base">
-              I help fractional CMOs, CFOs, CTOs and COOs turn their LinkedIn
-              into a client pipeline in 90 days. A clear profile, steady content,
-              and founders who reach out first.
+              Founders check your profile before they sign. I rebuild it and
+              write your content, so they see a senior operator worth the fee.
+              Not a CV. Built for fractional CMOs, CFOs, CTOs and COOs.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 min-[425px]:flex-row min-[425px]:flex-wrap min-[425px]:items-center sm:mt-10 sm:gap-4">
@@ -66,7 +66,7 @@ const HeroSection = () => {
                   height={24}
                   className="h-6 w-6 shrink-0"
                 />
-                Book a free 1:1 call
+                Book my free call
               </a>
 
               <button
@@ -80,6 +80,10 @@ const HeroSection = () => {
                 </span>
               </button>
             </div>
+
+            <p className="mt-4 text-[13px] text-white/60">
+              20 minutes. No pitch. You leave knowing what to fix first.
+            </p>
           </div>
 
           <div className="relative mx-auto w-full max-w-[380px] lg:mx-0 lg:max-w-none lg:justify-self-end">

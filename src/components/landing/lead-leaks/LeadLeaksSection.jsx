@@ -53,8 +53,8 @@ const LeadLeaksSection = () => {
           </h2>
 
           <p className="mx-auto mt-5 max-w-[560px] text-[13px] leading-relaxed text-white/75 md:text-sm">
-            It&apos;s rarely your skills. It&apos;s how your profile shows
-            them. See which of these is costing you contracts.
+            You&apos;re great at the work. Your profile just doesn&apos;t show
+            it. Which of these sounds like you?
           </p>
         </div>
       </div>
