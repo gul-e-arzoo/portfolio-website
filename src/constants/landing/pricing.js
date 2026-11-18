@@ -28,9 +28,9 @@ export const pricingTiers = [
     id: "ninety-day",
     name: "90-Day LinkedIn Management",
     description:
-      "I run your LinkedIn for 3 months. Profile, content and strategy, all in your voice. You approve. I do the rest.",
-    price: "$399",
-    period: "/90 days",
+      "I run your LinkedIn for 3 months. Profile, content and strategy, all in your voice. Priced on what you need.",
+    price: "Custom",
+    period: "",
     featured: true,
     popularLabel: "Most popular",
     cta: "Book a Call",
