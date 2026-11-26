@@ -49,7 +49,7 @@ const helveticaNeue = localFont({
   display: "swap",
 });
 
-const SITE_URL = "https://www.designwithgul.com";
+const SITE_URL = "https://designwithgul.com";
 const SITE_DESCRIPTION =
   "LinkedIn profile strategist for fractional CMOs, CFOs, CTOs and COOs. Profile rewrites, banners and done-for-you content that turn your LinkedIn into a client pipeline in 90 days.";
 

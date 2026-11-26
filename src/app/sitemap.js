@@ -1,7 +1,7 @@
 export const dynamic = "force-static";
 
 export default function sitemap() {
-  const base = "https://www.designwithgul.com";
+  const base = "https://designwithgul.com";
   const now = new Date();
   return [
     { url: `${base}/`, lastModified: now, changeFrequency: "weekly", priority: 1 },
