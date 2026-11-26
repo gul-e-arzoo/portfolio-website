@@ -109,14 +109,18 @@ export function PortfolioGallery() {
   const isLinkedInTab = activeFilter === "LinkedIn Branding";
   // Always two rows (one drifts left, one right). A row never has fewer
   // than 6 pieces, so it stays wider than the screen.
-  const rows = useMemo(
-    () =>
-      chunkRows(
-        galleryItems,
-        Math.max(IMAGES_PER_ROW, Math.ceil(galleryItems.length / PREVIEW_ROWS)),
-      ),
-    [galleryItems],
-  );
+  const rows = useMemo(() => {
+    // LinkedIn tab: banners in one row, full profile redesigns in the other.
+    if (isLinkedInTab) {
+      const banners = galleryItems.filter((i) => i.height < LINKEDIN_BANNER_MAX_H);
+      const cards = galleryItems.filter((i) => i.height >= LINKEDIN_BANNER_MAX_H);
+      return [banners, cards].filter((r) => r.length);
+    }
+    return chunkRows(
+      galleryItems,
+      Math.max(IMAGES_PER_ROW, Math.ceil(galleryItems.length / PREVIEW_ROWS)),
+    );
+  }, [galleryItems, isLinkedInTab]);
   const visibleRows = expanded ? rows : rows.slice(0, PREVIEW_ROWS);
   const canExpand = rows.length > PREVIEW_ROWS;
 
