@@ -6,14 +6,6 @@ import Button from "@/components/ui/Button";
 const Mastermind = () => {
   return (
     <section id="about" className="relative">
-      <Image
-        src="/mastermind-bottom-blurr.svg"
-        alt="bg effect"
-        width={1920}
-        height={184}
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-auto w-full"
-        style={{ width: "100%", height: "auto" }}
-      />
       <div className="mx-auto grid w-full max-w-360 grid-cols-1 items-center gap-8 px-4 py-12 min-[375px]:px-6 sm:px-8 sm:py-16 lg:grid-cols-2 lg:gap-10">
         <div className="order-2 w-full lg:order-1">
           <h1 className="text-2xl font-bold text-white min-[375px]:text-3xl sm:text-4xl md:text-5xl">
@@ -84,7 +76,15 @@ const Mastermind = () => {
             height={450}
             priority
             className="h-auto w-full max-w-112.5 object-contain"
-            style={{ width: "auto", height: "auto", maxWidth: "100%" }}
+            style={{
+              width: "auto",
+              height: "auto",
+              maxWidth: "100%",
+              // fade the bottom edge into the page instead of a hard crop
+              WebkitMaskImage:
+                "linear-gradient(to bottom, #000 70%, transparent 100%)",
+              maskImage: "linear-gradient(to bottom, #000 70%, transparent 100%)",
+            }}
           />
         </div>
       </div>
