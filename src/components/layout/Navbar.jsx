@@ -4,7 +4,8 @@ import React, { useEffect, useMemo, useState, useSyncExternalStore } from "react
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { navLinks, scheduleCallHref } from "@/constants";
+import { navLinks, linkedInHref } from "@/constants";
+import { FaLinkedinIn } from "react-icons/fa6";
 
 function subscribeToHash(onStoreChange) {
   if (typeof window === "undefined") return () => {};
@@ -58,13 +59,7 @@ function ChatAvatar({ size = "md" }) {
       <span
         className={`absolute -bottom-0.5 -right-0.5 flex ${cfg.badge} items-center justify-center rounded-full border-2 border-[#FF7782] bg-white p-0.5 shadow-sm`}
       >
-        <Image
-          src="/walogo.svg"
-          width={cfg.icon}
-          height={cfg.icon}
-          className="size-full object-contain"
-          alt=""
-        />
+        <FaLinkedinIn aria-hidden className="size-full text-[#0A66C2]" />
       </span>
     </span>
   );
@@ -204,11 +199,11 @@ const Navbar = () => {
         {/* Right: chat + hamburger (phones) */}
         <div className="z-10 col-start-2 row-start-1 flex min-w-0 items-center justify-self-end gap-1.5 min-[375px]:gap-2 sm:gap-2.5 md:col-start-3 md:col-end-4">
           <a
-            href={scheduleCallHref}
+            href={linkedInHref}
             target="_blank"
             rel="noopener noreferrer"
             className={`${chatPillBase} inline-flex min-w-0 max-w-[min(100%,9.5rem)] shrink py-1 pl-1 pr-2.5 min-[425px]:max-w-none min-[425px]:pr-3 md:max-w-none lg:pr-6 xl:pr-6`}
-            aria-label="Chat with Gul-e-Arzoo on WhatsApp"
+            aria-label="Chat with Gul-e-Arzoo on LinkedIn"
           >
             <ChatAvatar size="sm" />
             <span className="min-w-0 text-[10px] font-semibold leading-tight min-[375px]:text-[11px] lg:text-[13px] lg:whitespace-nowrap xl:text-sm">
@@ -260,7 +255,7 @@ const Navbar = () => {
               {/* Mobile Chat Button */}
               <li className="pt-3">
                 <a
-                  href={scheduleCallHref}
+                  href={linkedInHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`${chatPillBase} inline-flex w-full justify-center px-4 py-2.5`}

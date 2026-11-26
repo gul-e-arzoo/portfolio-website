@@ -10,6 +10,9 @@ export const navLinks = [
 export const scheduleCallHref = "https://wa.me/923281107720";
 
 /** Calendly booking: header "Book my free call" and the 1:1 strategy call buttons. */
+/** LinkedIn profile: menu chat button and final CTA. */
+export const linkedInHref = "https://www.linkedin.com/in/gul-executive-branding/";
+
 export const calendlyHref = "https://calendly.com/gul-arzoo0054/new-meeting-1";
 
 /** Footer social links. Swap in the real URL for any account here. */

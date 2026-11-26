@@ -1,7 +1,7 @@
 import React from "react";
 import { CiCircleCheck } from "react-icons/ci";
 import { pricingIntro, pricingTiers } from "@/constants/landing";
-import { calendlyHref, scheduleCallHref } from "@/constants";
+import { calendlyHref } from "@/constants";
 
 const cornerGlowBg = `radial-gradient(ellipse 90% 75% at 0% 0%, rgba(255,119,130,0.22), transparent 58%),
   radial-gradient(ellipse 80% 70% at 100% 0%, rgba(255,119,130,0.16), transparent 52%),
@@ -90,7 +90,7 @@ function PricingCard({ tier }) {
           </ul>
 
           <a
-            href={tier.id === "consultation" ? calendlyHref : scheduleCallHref}
+            href={calendlyHref}
             target="_blank"
             rel="noopener noreferrer"
             className={`mt-8 inline-flex w-full items-center justify-center rounded-full py-3.5 text-sm font-semibold transition-colors ${

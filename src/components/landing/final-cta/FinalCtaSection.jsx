@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { scheduleCallHref } from "@/constants";
+import { linkedInHref } from "@/constants";
 
 const cornerGlowBg = `radial-gradient(ellipse 90% 75% at 0% 0%, rgba(255,119,130,0.24), transparent 58%),
   radial-gradient(ellipse 80% 70% at 100% 0%, rgba(255,119,130,0.18), transparent 52%),
@@ -36,15 +36,15 @@ const FinalCtaSection = () => {
                 Your next contract starts with your profile.
               </h2>
               <p className="mx-auto mt-3 max-w-xl text-sm text-white/75">
-                Book a free 20-minute call. I&apos;ll look at your profile with you and show you the first 3 things to fix. You don&apos;t commit to anything.
+                Send me a message on LinkedIn. I&apos;ll look at your profile and tell you the first 3 things to fix. You don&apos;t commit to anything.
               </p>
               <a
-                href={scheduleCallHref}
+                href={linkedInHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF7782] px-8 py-3.5 text-sm font-semibold text-[#1B0002] shadow-[0_8px_28px_rgba(255,119,130,0.4)] transition-colors hover:bg-[#ff6875]"
               >
-                Show me what to fix
+                Message me on LinkedIn
               </a>
               <p className="mt-3 text-xs text-white/55">
                 No pitch. No pressure. Just a clear next step.

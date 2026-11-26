@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { GoArrowUpRight, GoCheckCircle } from "react-icons/go";
-import { products, scheduleCallHref } from "@/constants";
+import { products, calendlyHref } from "@/constants";
 import AnimatedContainer from "@/components/ui/AnimatedContainer";
 
 const updatedContent = [
@@ -137,7 +137,7 @@ const Products = () => {
                       CTA
                   ================================= */}
                   <a
-                    href={product.link || scheduleCallHref}
+                    href={product.link || calendlyHref}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group mt-7 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[8px] bg-[#FF7782] px-5 py-3 text-[12px] font-semibold text-white transition-colors duration-200 hover:bg-[#ff6875] sm:text-[13px]"
