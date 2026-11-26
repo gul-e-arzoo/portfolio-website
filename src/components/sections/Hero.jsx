@@ -24,20 +24,13 @@ const Hero = () => {
         <div className="mb-8 flex flex-col items-center justify-center gap-3 sm:mb-10 sm:flex-row sm:flex-wrap sm:gap-4">
           <Image
             src="/home_page/trust_bar.png"
-            alt="Client photos"
-            width={537}
-            height={69}
-            className="h-9 w-auto object-contain md:h-10"
-            style={{ width: "auto", height: "auto" }}
+            alt="Trusted by 25+ coaches, founders and fractional execs"
+            width={711}
+            height={86}
+            className="h-auto w-full max-w-[440px] object-contain md:max-w-[480px]"
+            style={{ height: "auto" }}
             priority
           />
-          <p className="flex flex-wrap items-center justify-center gap-1.5 text-center text-sm text-white/90 md:text-base">
-            <span>Trusted by</span>
-            <span className="inline-block -rotate-2 rounded-sm bg-gradient-to-r from-[#FF7782] to-[#6B3237] px-1.5 py-0.5 text-xs font-extrabold text-white md:text-sm">
-              25+
-            </span>
-            <span>Coaches, Founders and Fractional Execs</span>
-          </p>
         </div>
 
         <div className="text-center">
