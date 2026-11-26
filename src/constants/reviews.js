@@ -16,7 +16,7 @@ I’d recommend Gul to execs and leaders looking to design a personal brand that
   {
     id: 11,
     name: "Sophie Frey",
-    job: "Leadership Advisor",
+    job: "Career Advisor for Finance Professionals",
     img: "/testimonials/C11.jpg",
     info: `Gul’s approach to visibility on LI is very professional and practical: we had a conversation, and continued through many exchanges offline as the work was being over-delivered.
 

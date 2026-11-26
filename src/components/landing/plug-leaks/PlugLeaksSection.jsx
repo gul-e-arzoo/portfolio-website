@@ -8,7 +8,7 @@ import {
   plugLeakPipeline,
   plugLeaksIntro,
 } from "@/constants/landing";
-import { scheduleCallHref } from "@/constants";
+import { calendlyHref } from "@/constants";
 
 function GlowCard({ featured, children }) {
   return (
@@ -111,7 +111,7 @@ const PlugLeaksSection = () => {
                 </button>
               ) : (
                 <a
-                  href={scheduleCallHref}
+                  href={calendlyHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-6 inline-flex w-full items-center justify-center gap-2.5 rounded-full border border-[#FF7782]/55 bg-[#29070A] px-5 py-3.5 text-sm font-semibold text-white transition-colors hover:border-[#FF7782] hover:bg-[#FF7782]/10 sm:text-[15px]"

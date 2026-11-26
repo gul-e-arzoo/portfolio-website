@@ -7,7 +7,7 @@ import {
   landingHeroAssets,
   landingHeroStats,
 } from "@/constants/landing";
-import { scheduleCallHref } from "@/constants";
+import { calendlyHref } from "@/constants";
 
 const HeroSection = () => {
   const scrollToPlan = () => {
@@ -55,7 +55,7 @@ const HeroSection = () => {
 
             <div className="mt-8 flex flex-nowrap items-center justify-center gap-2 sm:mt-10 sm:gap-4 lg:justify-start">
               <a
-                href={scheduleCallHref}
+                href={calendlyHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex shrink-0 items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-[#FF7782] px-3.5 py-2.5 text-[13px] font-semibold min-[400px]:gap-2.5 min-[400px]:px-5 min-[400px]:py-3 min-[400px]:text-sm text-[#1B0002] shadow-[0_8px_28px_rgba(255,119,130,0.35)] transition-colors hover:bg-[#ff6875] sm:px-7 sm:py-3.5 sm:text-base"

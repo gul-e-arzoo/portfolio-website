@@ -19,7 +19,7 @@ const spotlights = [
   {
     id: "sophie",
     name: "Sophie Frey",
-    role: "Leadership Advisor",
+    role: "Career Advisor for Finance Professionals",
     followers: "3.5K+ followers",
     img: "/testimonials/C11.jpg",
     label: "In her words",

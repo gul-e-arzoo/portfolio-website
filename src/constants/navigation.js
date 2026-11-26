@@ -9,6 +9,9 @@ export const navLinks = [
 
 export const scheduleCallHref = "https://wa.me/923281107720";
 
+/** Calendly booking: header "Book my free call" and the 1:1 strategy call buttons. */
+export const calendlyHref = "https://calendly.com/gul-arzoo0054/new-meeting-1";
+
 /** Footer social links. Swap in the real URL for any account here. */
 export const socialLinks = [
   {
