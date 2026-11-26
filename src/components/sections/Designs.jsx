@@ -15,7 +15,7 @@ const IMAGES_PER_ROW = 3;
 const toggleButtonClass =
   "cursor-pointer bg-transparent text-[13px] font-semibold text-[#FF7782] underline decoration-[#FF7782]/60 underline-offset-4 transition-colors duration-200 hover:text-white hover:decoration-white sm:text-sm";
 
-const LINKEDIN_BANNER_MAX_H = 220;
+const LINKEDIN_BANNER_MAX_H = 300;
 
 function chunkRows(items, size = IMAGES_PER_ROW) {
   const rows = [];
@@ -112,7 +112,7 @@ export function PortfolioGallery() {
   return (
     <section
       id="portfolio"
-      className="relative w-full overflow-x-clip pb-14 pt-2 md:pb-16 lg:pb-20"
+      className="relative w-full overflow-x-clip pb-14 pt-0 md:pb-16 lg:pb-20"
     >
       <div className="mx-auto flex max-w-[1120px] flex-wrap items-center justify-center gap-2 px-4">
         {portfolioFilters.map((filter) => {

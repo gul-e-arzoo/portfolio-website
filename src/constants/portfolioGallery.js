@@ -12,6 +12,18 @@ function galleryPath(folder, filename) {
 
 /** Native pixel size — keeps grid rows even when widths differ */
 const IMAGE_DIMENSIONS = {
+  "banner-01.png": { width: 770, height: 267 },
+  "banner-02.png": { width: 770, height: 267 },
+  "banner-03.png": { width: 770, height: 267 },
+  "banner-04.png": { width: 770, height: 267 },
+  "banner-05.png": { width: 770, height: 267 },
+  "banner-06.png": { width: 770, height: 267 },
+  "profile-01.jpg": { width: 765, height: 692 },
+  "profile-02.jpg": { width: 765, height: 692 },
+  "profile-03.jpg": { width: 765, height: 692 },
+  "profile-04.jpg": { width: 765, height: 692 },
+  "profile-05.jpg": { width: 765, height: 692 },
+  "profile-06.jpg": { width: 765, height: 692 },
   "Group 1410103926.png": { width: 458, height: 178 },
   "Group 1410103926-1.png": { width: 513, height: 178 },
   "Group 1410103926-2.png": { width: 438, height: 178 },
@@ -48,18 +60,18 @@ function mapGalleryItems(folder, files, idPrefix, altLabel) {
 
 /** Short banners first, then taller cards — avoids awkward grid gaps */
 const linkedInBrandingFiles = [
-  "Group 1410103926.png",
-  "Group 1410103926-1.png",
-  "Group 1410103926-2.png",
-  "Group 1410103926-3.png",
-  "Group 1410103926-4.png",
-  "Group 2085663454.png",
-  "Rectangle 40256.png",
-  "Rectangle 40257.png",
-  "Rectangle 40258.png",
-  "Rectangle 40259.png",
-  "Rectangle 40260.png",
-  "Rectangle 40261.png",
+  "banner-01.png",
+  "banner-02.png",
+  "banner-03.png",
+  "banner-04.png",
+  "banner-05.png",
+  "banner-06.png",
+  "profile-01.jpg",
+  "profile-02.jpg",
+  "profile-03.jpg",
+  "profile-04.jpg",
+  "profile-05.jpg",
+  "profile-06.jpg",
 ];
 
 const contentCreationFiles = [

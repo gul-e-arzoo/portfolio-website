@@ -2,18 +2,12 @@
 
 import React from "react";
 import Image from "next/image";
-import { scheduleCallHref } from "@/constants";
-import { FaChevronDown, FaRegCalendarCheck } from "react-icons/fa";
 
 const Hero = () => {
-  const scrollToWork = () => {
-    document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section
       id="hero"
-      className="relative w-full overflow-x-clip pb-14 pt-24 min-[375px]:pt-28 md:pb-20 md:pt-32"
+      className="relative w-full overflow-x-clip pb-8 pt-24 min-[375px]:pt-28 md:pb-10 md:pt-32"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_35%,rgba(255,119,130,0.18),transparent_70%)]"
@@ -63,31 +57,6 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="mt-8 flex w-full flex-col items-stretch justify-center gap-3 min-[425px]:flex-row min-[425px]:flex-wrap min-[425px]:items-center sm:mt-10 sm:gap-4 md:mt-12">
-          <a
-            href={scheduleCallHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-[#FF7782] px-5 py-3 text-sm font-semibold text-[#1B0002] shadow-[0_8px_28px_rgba(255,119,130,0.35)] transition-colors hover:bg-[#ff6875] sm:px-7 sm:py-3.5 sm:text-base"
-          >
-            <FaRegCalendarCheck
-              aria-hidden
-              className="h-[18px] w-[18px] shrink-0 text-[#1B0002]"
-            />
-            Book my free call
-          </a>
-
-          <button
-            type="button"
-            onClick={scrollToWork}
-            className="inline-flex shrink-0 cursor-pointer items-center justify-center gap-3 rounded-full border border-[#FF7782]/80 bg-[#1B0002] px-5 py-3 text-sm font-medium text-white transition-colors hover:border-[#FF7782] sm:px-7 sm:py-3.5 sm:text-base"
-          >
-            See my Work
-            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#FF7782] text-[#1B0002]">
-              <FaChevronDown className="text-sm" />
-            </span>
-          </button>
-        </div>
       </div>
     </section>
   );
