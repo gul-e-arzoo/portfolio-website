@@ -10,7 +10,7 @@ import {
 } from "@/constants";
 import AnimatedContainer from "@/components/ui/AnimatedContainer";
 
-const IMAGES_PER_ROW = 3;
+const IMAGES_PER_ROW = 6;
 
 const toggleButtonClass =
   "cursor-pointer bg-transparent text-[13px] font-semibold text-[#FF7782] underline decoration-[#FF7782]/60 underline-offset-4 transition-colors duration-200 hover:text-white hover:decoration-white sm:text-sm";
@@ -25,10 +25,10 @@ function chunkRows(items, size = IMAGES_PER_ROW) {
   return rows;
 }
 
-/* Big tiles so a row of 3 is wider than the screen: each piece shows once,
-   then the next, with no copy of the same design visible at the same time. */
-const BANNER_TILE_WIDTH = "w-[86vw] sm:w-[62vw] lg:w-[42vw]";
-const CARD_TILE_WIDTH = "w-[86vw] sm:w-[48vw] lg:w-[34vw]";
+/* Six tiles per row, sized so the row is always wider than the screen:
+   each piece shows once, then the next, with no copy visible at once. */
+const BANNER_TILE_WIDTH = "w-[72vw] sm:w-[44vw] lg:w-[28vw]";
+const CARD_TILE_WIDTH = "w-[62vw] sm:w-[36vw] lg:w-[22vw]";
 
 function GalleryGridTile({ item, isLinkedInTab }) {
   const isBanner = isLinkedInTab && item.height < LINKEDIN_BANNER_MAX_H;
@@ -44,7 +44,7 @@ function GalleryGridTile({ item, isLinkedInTab }) {
         alt={item.alt}
         width={item.width}
         height={item.height}
-        sizes="(max-width: 640px) 86vw, (max-width: 1024px) 62vw, 42vw"
+        sizes="(max-width: 640px) 72vw, (max-width: 1024px) 44vw, 28vw"
         className="block h-auto w-full rounded-md transition-transform duration-500 group-hover:scale-[1.01]"
       />
     </div>
@@ -105,7 +105,16 @@ export function PortfolioGallery() {
     [activeFilter],
   );
   const isLinkedInTab = activeFilter === "LinkedIn Branding";
-  const rows = useMemo(() => chunkRows(galleryItems, IMAGES_PER_ROW), [galleryItems]);
+  // Always two rows (one drifts left, one right). A row never has fewer
+  // than 6 pieces, so it stays wider than the screen.
+  const rows = useMemo(
+    () =>
+      chunkRows(
+        galleryItems,
+        Math.max(IMAGES_PER_ROW, Math.ceil(galleryItems.length / PREVIEW_ROWS)),
+      ),
+    [galleryItems],
+  );
   const visibleRows = expanded ? rows : rows.slice(0, PREVIEW_ROWS);
   const canExpand = rows.length > PREVIEW_ROWS;
 
@@ -151,7 +160,7 @@ export function PortfolioGallery() {
                 items={rowItems}
                 isLinkedInTab={isLinkedInTab}
                 reverse={rowIndex % 2 === 1}
-                durationSec={Math.max(36, rowItems.length * 14)}
+                durationSec={Math.max(36, rowItems.length * 9)}
               />
             ))}
           </div>
