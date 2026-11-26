@@ -35,8 +35,10 @@ function GalleryGridTile({ item, isLinkedInTab }) {
 
   return (
     <div
-      className={`group shrink-0 overflow-hidden rounded-xl bg-white p-3 shadow-[0_2px_12px_rgba(0,0,0,0.12)] sm:p-4 ${
-        isBanner ? BANNER_TILE_WIDTH : CARD_TILE_WIDTH
+      className={`group shrink-0 overflow-hidden ${
+        isBanner
+          ? `rounded-xl bg-white p-3 sm:p-4 ${BANNER_TILE_WIDTH}`
+          : `rounded-md ${CARD_TILE_WIDTH}`
       }`}
     >
       <Image
@@ -45,7 +47,7 @@ function GalleryGridTile({ item, isLinkedInTab }) {
         width={item.width}
         height={item.height}
         sizes="(max-width: 640px) 72vw, (max-width: 1024px) 44vw, 28vw"
-        className="block h-auto w-full rounded-md transition-transform duration-500 group-hover:scale-[1.01]"
+        className="block h-auto w-full transition-transform duration-500 group-hover:scale-[1.01]"
       />
     </div>
   );
@@ -65,7 +67,7 @@ function GalleryMarqueeRow({ items, rowKey, durationSec, isLinkedInTab, reverse 
         aria-hidden
       />
       <div
-        className="portfolio-gallery-marquee-track flex w-max items-center gap-4 pr-4 will-change-transform"
+        className="portfolio-gallery-marquee-track flex w-max items-center gap-3 pr-3 will-change-transform"
         style={{
           animation: `${reverse ? "marqueeHorizontalLtr" : "marqueeHorizontalRtl"} ${durationSec}s linear infinite`,
         }}
@@ -152,7 +154,7 @@ export function PortfolioGallery() {
             No projects available for this service yet.
           </p>
         ) : (
-          <div key={activeFilter} className="space-y-3 sm:space-y-4">
+          <div key={activeFilter} className="space-y-3">
             {visibleRows.map((rowItems, rowIndex) => (
               <GalleryMarqueeRow
                 key={`${activeFilter}-row-${rowIndex}`}
