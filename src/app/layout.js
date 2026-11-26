@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
+import AmbientBackground from "@/components/layout/AmbientBackground";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,6 +67,7 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} ${bricolageGrotesque.variable} ${playfairDisplay.variable} ${helveticaNeue.variable} h-full overflow-x-clip antialiased`}
     >
       <body className="flex min-h-full min-w-0 flex-col overflow-x-clip bg-[#1B0002] text-white">
+        <AmbientBackground />
         <Navbar />
         <main className="min-w-0 flex-1">{children}</main>
         <Footer />

@@ -95,3 +95,60 @@ html {
   -ms-overflow-style: none;  
   scrollbar-width: none;     
 }
+/* ===== Ambient background glow (AmbientBackground.jsx) ===== */
+.ambient-bg {
+  mix-blend-mode: screen;
+}
+.ambient-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  will-change: transform;
+}
+.ambient-blob--a {
+  width: 46vw;
+  height: 46vw;
+  left: -12vw;
+  top: -8vh;
+  background: radial-gradient(circle, rgba(255, 119, 130, 0.3), transparent 68%);
+  animation: ambientDriftA 38s ease-in-out infinite alternate;
+}
+.ambient-blob--b {
+  width: 40vw;
+  height: 40vw;
+  right: -10vw;
+  top: 30vh;
+  background: radial-gradient(circle, rgba(194, 57, 90, 0.34), transparent 68%);
+  animation: ambientDriftB 46s ease-in-out infinite alternate;
+}
+.ambient-blob--c {
+  width: 34vw;
+  height: 34vw;
+  left: 30vw;
+  bottom: -14vh;
+  background: radial-gradient(circle, rgba(255, 214, 220, 0.12), transparent 70%);
+  animation: ambientDriftC 54s ease-in-out infinite alternate;
+}
+@keyframes ambientDriftA {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(18vw, 14vh, 0) scale(1.15); }
+  100% { transform: translate3d(6vw, 32vh, 0) scale(0.95); }
+}
+@keyframes ambientDriftB {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-16vw, -12vh, 0) scale(1.1); }
+  100% { transform: translate3d(-28vw, 10vh, 0) scale(1); }
+}
+@keyframes ambientDriftC {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(-20vw, -30vh, 0) scale(1.2); }
+}
+@media (max-width: 767px) {
+  .ambient-blob { filter: blur(60px); }
+  .ambient-blob--a { width: 80vw; height: 80vw; }
+  .ambient-blob--b { width: 70vw; height: 70vw; }
+  .ambient-blob--c { width: 60vw; height: 60vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambient-blob { animation: none; }
+}
