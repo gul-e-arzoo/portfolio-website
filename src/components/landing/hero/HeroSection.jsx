@@ -30,12 +30,12 @@ const HeroSection = () => {
       <div className="relative z-10 mx-auto max-w-[1280px] px-3 min-[375px]:px-4 sm:px-6 lg:px-8">
         <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,42%)] lg:gap-6 xl:grid-cols-[minmax(0,1fr)_460px]">
           <div className="pb-8 lg:pb-14">
-            <div className="mb-6 flex flex-wrap items-center gap-3 sm:mb-8 sm:gap-4">
+            <div className="mb-6 flex flex-wrap items-center gap-3 sm:mb-8">
               <Image
-                src="/Group.svg"
-                alt=""
-                width={240}
-                height={38}
+                src="/home_page/trust_bar.png"
+                alt="Client photos"
+                width={537}
+                height={69}
                 className="h-9 w-auto object-contain md:h-10"
                 style={{ width: "auto", height: "auto" }}
                 priority
@@ -45,7 +45,7 @@ const HeroSection = () => {
                 <span className="inline-block -rotate-2 rounded-sm bg-gradient-to-r from-[#FF7782] to-[#6B3237] px-1.5 py-0.5 text-xs font-extrabold text-white md:text-sm">
                   25+
                 </span>
-                <span>LinkedIn clients, including fractional execs</span>
+                <span>Coaches, Founders and Fractional Execs</span>
               </p>
             </div>
 

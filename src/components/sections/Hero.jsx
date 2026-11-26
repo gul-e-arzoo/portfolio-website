@@ -23,10 +23,10 @@ const Hero = () => {
       <div className="relative z-10 mx-auto max-w-[920px] px-3 min-[375px]:px-4 sm:px-6">
         <div className="mb-8 flex flex-col items-center justify-center gap-3 sm:mb-10 sm:flex-row sm:flex-wrap sm:gap-4">
           <Image
-            src="/Group.svg"
-            alt=""
-            width={240}
-            height={38}
+            src="/home_page/trust_bar.png"
+            alt="Client photos"
+            width={537}
+            height={69}
             className="h-9 w-auto object-contain md:h-10"
             style={{ width: "auto", height: "auto" }}
             priority
@@ -36,7 +36,7 @@ const Hero = () => {
             <span className="inline-block -rotate-2 rounded-sm bg-gradient-to-r from-[#FF7782] to-[#6B3237] px-1.5 py-0.5 text-xs font-extrabold text-white md:text-sm">
               25+
             </span>
-            <span>LinkedIn clients, including fractional execs</span>
+            <span>Coaches, Founders and Fractional Execs</span>
           </p>
         </div>
 
