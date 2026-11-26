@@ -10,24 +10,10 @@ const cornerGlowBg = `radial-gradient(ellipse 90% 75% at 0% 0%, rgba(255,119,130
 const FinalCtaSection = () => {
   return (
     <section className="relative w-full overflow-x-clip bg-[#1B0002] py-16 md:py-24">
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[min(100%,520px)] -translate-x-1/2 -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(255,119,130,0.2),transparent_70%)]"
-        aria-hidden
-      />
-
-      <div className="relative mx-auto max-w-[720px] px-3 min-[375px]:px-4 sm:px-6">
+      <div className="relative mx-auto max-w-[1120px] px-3 min-[375px]:px-4 sm:px-6">
         <div className="relative isolate">
           <div
-            aria-hidden
-            className="pointer-events-none absolute -inset-5 rounded-[28px] bg-[#FF7782]/30 blur-3xl"
-          />
-          <div
-            aria-hidden
-            className="pointer-events-none absolute -inset-2 rounded-[24px] bg-[#FF7782]/15 blur-xl"
-          />
-
-          <div
-            className="relative z-10 overflow-hidden rounded-2xl border border-[#FF7782]/55 px-4 py-10 text-center shadow-[0_0_0_1px_rgba(255,119,130,0.2),0_0_40px_rgba(255,119,130,0.35),0_0_80px_rgba(255,119,130,0.18)] min-[375px]:px-6 min-[375px]:py-12 md:px-10 md:py-14"
+            className="relative z-10 overflow-hidden rounded-2xl border border-[#FF7782]/55 px-4 py-10 text-center min-[375px]:px-6 min-[375px]:py-12 md:px-10 md:py-14"
             style={{
               backgroundColor: "#431216",
               backgroundImage: cornerGlowBg,
@@ -36,10 +22,6 @@ const FinalCtaSection = () => {
             <div
               className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,119,130,0.22),transparent_55%)]"
               aria-hidden
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute inset-0 rounded-2xl shadow-[inset_0_0_48px_rgba(255,119,130,0.1)]"
             />
 
             <div className="relative z-10">
@@ -53,7 +35,7 @@ const FinalCtaSection = () => {
               <h2 className="mt-6 font-bricolage text-xl font-bold leading-snug text-white min-[375px]:text-2xl md:text-3xl">
                 Your next contract starts with your profile.
               </h2>
-              <p className="mx-auto mt-3 max-w-md text-sm text-white/75">
+              <p className="mx-auto mt-3 max-w-xl text-sm text-white/75">
                 Book a free 20-minute call. I&apos;ll look at your profile with you and show you the first 3 things to fix. You don&apos;t commit to anything.
               </p>
               <a

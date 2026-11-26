@@ -39,10 +39,10 @@ const PACKAGE_REVIEWS = "/home_page/what_this_package_can_do_section";
 
 /** Header above LinkedIn review wall (same as reference) */
 export const packageReviewsIntro = {
-  badge: "What clients say",
-  title: "In their own words",
+  badge: "From my community",
+  title: "What my community says",
   subtitle:
-    "Reviews from clients and people I've worked with on LinkedIn.",
+    "Notes from people in my community who learned LinkedIn design and content with me.",
 };
 
 export const packageReviewImages = Array.from({ length: 13 }, (_, index) => {

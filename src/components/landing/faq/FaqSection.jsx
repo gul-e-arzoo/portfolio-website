@@ -8,12 +8,13 @@ const inactiveCardGlow = `radial-gradient(ellipse 90% 75% at 0% 0%, rgba(255,119
   radial-gradient(ellipse 70% 60% at 100% 100%, rgba(255,119,130,0.1), transparent 48%),
   radial-gradient(ellipse 65% 55% at 0% 100%, rgba(255,119,130,0.08), transparent 45%)`;
 
-function PlusIcon({ onPink = false }) {
+function PlusIcon({ open = false }) {
   return (
     <span
-      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border text-lg font-light leading-none ${
-        onPink
-          ? "border-white/95 text-white"
+      aria-hidden
+      className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border text-lg font-light leading-none transition-[transform,border-color,color] duration-300 ${
+        open
+          ? "rotate-45 border-[#1B0002]/70 text-[#1B0002]"
           : "border-[#FF7782]/70 text-white"
       }`}
     >
@@ -59,37 +60,27 @@ const FaqSection = () => {
                 <li key={item.id}>
                   <button
                     type="button"
+                    aria-expanded={isOpen}
                     onClick={() => setOpenId(isOpen ? null : item.id)}
-                    className={`relative w-full overflow-hidden rounded-[14px] text-left transition-colors ${
+                    className={`w-full cursor-pointer rounded-[14px] border px-4 py-4 text-left transition-colors duration-300 md:px-5 md:py-[18px] ${
                       isOpen
-                        ? "bg-[#FF7782] px-4 py-4 shadow-[0_0_24px_rgba(255,119,130,0.25)] md:px-5 md:py-[18px]"
-                        : "border border-[#FF7782]/45 px-4 py-4 md:px-5 md:py-[18px] hover:border-[#FF7782]/60"
+                        ? "border-[#FF7782] bg-[#FF7782]"
+                        : "border-[#FF7782]/30 bg-[#2A0A0D] hover:border-[#FF7782]/60"
                     }`}
-                    style={
-                      isOpen
-                        ? undefined
-                        : {
-                            backgroundColor: "#5a252a",
-                            backgroundImage: inactiveCardGlow,
-                          }
-                    }
                   >
-                    {!isOpen && (
+                    <div className="flex items-center justify-between gap-4">
                       <span
-                        aria-hidden
-                        className="pointer-events-none absolute inset-0 rounded-[14px] shadow-[inset_0_0_28px_rgba(255,119,130,0.08)]"
-                      />
-                    )}
-
-                    <div className="relative z-10 flex items-center justify-between gap-4">
-                      <span className="text-[15px] font-bold leading-snug text-white md:text-base">
+                        className={`text-[15px] font-bold leading-snug md:text-base ${
+                          isOpen ? "text-[#1B0002]" : "text-white"
+                        }`}
+                      >
                         {item.question}
                       </span>
-                      <PlusIcon onPink={isOpen} />
+                      <PlusIcon open={isOpen} />
                     </div>
 
-                    {!isOpen && (
-                      <p className="relative z-10 mt-3 pr-12 text-[13px] font-normal leading-relaxed text-white/80 md:text-sm">
+                    {isOpen && (
+                      <p className="mt-3 pr-12 text-[13px] font-medium leading-relaxed text-[#1B0002]/85 md:text-sm">
                         {item.answer}
                       </p>
                     )}

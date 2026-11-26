@@ -12,46 +12,26 @@ import { scheduleCallHref } from "@/constants";
 
 function GlowCard({ featured, children }) {
   return (
-    <div className="relative isolate">
-      {/* Soft bloom behind card (reference-style outer glow) */}
+    <div className="group relative isolate">
+      {/* Soft bloom that fades in on hover (active state) */}
       <div
         aria-hidden
-        className={`pointer-events-none absolute -inset-4 rounded-[28px] blur-3xl ${
-          featured
-            ? "bg-[#FF7782]/35"
-            : "bg-[#FF7782]/18"
-        }`}
-      />
-      <div
-        aria-hidden
-        className={`pointer-events-none absolute -inset-1 rounded-[22px] blur-xl ${
-          featured ? "bg-[#FF7782]/20" : "bg-[#FF7782]/10"
-        }`}
+        className="pointer-events-none absolute -inset-3 rounded-[26px] bg-[#FF7782]/20 opacity-0 blur-3xl transition-opacity duration-500 ease-out group-hover:opacity-100"
       />
 
       <article
-        className={`relative z-10 overflow-hidden rounded-[18px] border p-6 md:p-7 ${
-          featured
-            ? "border-[#FF7782]/75 shadow-[0_0_0_1px_rgba(255,119,130,0.35),0_0_32px_rgba(255,119,130,0.45),0_0_64px_rgba(255,119,130,0.28),0_0_100px_rgba(255,119,130,0.14)]"
-            : "border-[#FF7782]/40 shadow-[0_0_0_1px_rgba(255,119,130,0.12),0_0_28px_rgba(255,119,130,0.22),0_0_56px_rgba(255,119,130,0.12)]"
-        }`}
+        className={`relative z-10 overflow-hidden rounded-[18px] border p-6 transition-[border-color,box-shadow,transform] duration-500 ease-out group-hover:-translate-y-1 group-hover:border-[#FF7782]/70 group-hover:shadow-[0_18px_48px_rgba(255,119,130,0.22)] md:p-7 ${
+          featured ? "border-[#FF7782]/45" : "border-[#FF7782]/25"
+        } shadow-[0_8px_24px_rgba(0,0,0,0.25)]`}
         style={{
           backgroundColor: "#431216",
           backgroundImage: featured
-            ? `radial-gradient(ellipse 90% 75% at 0% 0%, rgba(255,119,130,0.28), transparent 58%),
-               radial-gradient(ellipse 80% 70% at 100% 0%, rgba(255,119,130,0.2), transparent 52%),
-               radial-gradient(ellipse 70% 60% at 100% 100%, rgba(255,119,130,0.16), transparent 48%),
-               radial-gradient(ellipse 65% 55% at 0% 100%, rgba(255,119,130,0.14), transparent 45%)`
-            : `radial-gradient(ellipse 85% 70% at 0% 0%, rgba(255,119,130,0.18), transparent 55%),
-               radial-gradient(ellipse 75% 65% at 100% 0%, rgba(255,119,130,0.14), transparent 50%),
-               radial-gradient(ellipse 60% 55% at 100% 100%, rgba(255,119,130,0.1), transparent 46%),
-               radial-gradient(ellipse 55% 50% at 0% 100%, rgba(255,119,130,0.08), transparent 42%)`,
+            ? `radial-gradient(ellipse 90% 75% at 0% 0%, rgba(255,119,130,0.22), transparent 58%),
+               radial-gradient(ellipse 70% 60% at 100% 100%, rgba(255,119,130,0.12), transparent 48%)`
+            : `radial-gradient(ellipse 85% 70% at 0% 0%, rgba(255,119,130,0.14), transparent 55%),
+               radial-gradient(ellipse 60% 55% at 100% 100%, rgba(255,119,130,0.08), transparent 46%)`,
         }}
       >
-        <div
-          aria-hidden
-          className="pointer-events-none absolute inset-0 rounded-[18px] shadow-[inset_0_0_40px_rgba(255,119,130,0.08)]"
-        />
         <div className="relative z-10">{children}</div>
       </article>
     </div>

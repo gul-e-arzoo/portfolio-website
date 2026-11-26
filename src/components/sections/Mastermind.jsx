@@ -45,7 +45,7 @@ const Mastermind = () => {
 
           <div className="relative z-20 mt-5 flex flex-col gap-2 min-[425px]:flex-row min-[425px]:flex-wrap sm:flex-nowrap sm:gap-3">
             <Button
-              href="https://www.linkedin.com/in/visibilitydesignerforcoaches/"
+              href="https://www.linkedin.com/in/gul-executive-branding/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex justify-center items-center gap-2 uppercase rounded-full sm:text-lg text-sm px-4 py-3"

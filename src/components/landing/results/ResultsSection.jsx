@@ -33,7 +33,7 @@ function SectionIntro({ intro }) {
 const PACKAGE_REVIEW_PREVIEW = 6;
 
 const toggleButtonClass =
-  "rounded-full border border-[#FF7782] bg-transparent px-8 py-3 text-[11px] font-semibold text-white transition-all duration-200 hover:bg-[#FF7782] hover:text-[#1B0002] sm:text-xs";
+  "cursor-pointer bg-transparent text-[13px] font-semibold text-[#FF7782] underline decoration-[#FF7782]/60 underline-offset-4 transition-colors duration-200 hover:text-white hover:decoration-white sm:text-sm";
 
 const ResultsSection = () => {
   const [packageReviewsExpanded, setPackageReviewsExpanded] = useState(false);

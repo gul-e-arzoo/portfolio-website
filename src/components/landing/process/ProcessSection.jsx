@@ -10,7 +10,7 @@ const cornerGlowBg = `radial-gradient(ellipse 90% 75% at 0% 0%, rgba(255,119,130
 function ProcessPhaseCard({ phase }) {
   return (
     <article
-      className="relative overflow-hidden rounded-[14px] border border-[#FF7782]/45 shadow-[0_0_24px_rgba(255,119,130,0.1),0_0_0_1px_rgba(255,119,130,0.1)]"
+      className="relative overflow-hidden rounded-[14px] border border-[#FF7782]/45 shadow-[0_-14px_36px_rgba(27,0,2,0.75),0_0_0_1px_rgba(255,119,130,0.1)]"
       style={{
         backgroundColor: "#431216",
         backgroundImage: cornerGlowBg,
@@ -76,9 +76,18 @@ const ProcessSection = () => {
           </p>
         </div>
 
-        <div className="mt-9 flex flex-col gap-4 md:mt-10 md:gap-4">
-          {processPhases.map((phase) => (
-            <ProcessPhaseCard key={phase.id} phase={phase} />
+        {/* Stacking cards: each card sticks a little lower than the one
+            before it, so the next card slides up over the previous one and
+            leaves its top edge showing. */}
+        <div className="mt-9 flex flex-col gap-10 md:mt-10 md:gap-16">
+          {processPhases.map((phase, index) => (
+            <div
+              key={phase.id}
+              className="sticky"
+              style={{ top: `calc(96px + ${index * 28}px)` }}
+            >
+              <ProcessPhaseCard phase={phase} />
+            </div>
           ))}
         </div>
       </div>

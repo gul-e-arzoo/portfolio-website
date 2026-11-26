@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import {
   whoItsForAudiences,
   whoItsForIntro,
@@ -9,31 +11,31 @@ const cornerGlowBg = `radial-gradient(ellipse 90% 75% at 0% 0%, rgba(255,119,130
   radial-gradient(ellipse 70% 60% at 100% 100%, rgba(255,119,130,0.1), transparent 48%),
   radial-gradient(ellipse 65% 55% at 0% 100%, rgba(255,119,130,0.08), transparent 45%)`;
 
-function AudienceCard({ audience }) {
-  const badgeFilled = audience.badgeStyle === "filled";
-
+function AudienceCard({ audience, active, onActivate }) {
   return (
     <article
-      className="relative overflow-hidden rounded-[14px] border border-[#FF7782]/40 shadow-[0_0_24px_rgba(255,119,130,0.1)]"
+      onMouseEnter={onActivate}
+      onFocus={onActivate}
+      tabIndex={0}
+      className={`relative overflow-hidden rounded-[14px] border outline-none transition-[border-color,box-shadow,transform] duration-500 ease-out ${
+        active
+          ? "-translate-y-0.5 border-[#FF7782]/75 shadow-[0_16px_44px_rgba(255,119,130,0.22)]"
+          : "border-[#FF7782]/25 shadow-[0_8px_24px_rgba(0,0,0,0.25)]"
+      }`}
       style={{
         backgroundColor: "#431216",
         backgroundImage: cornerGlowBg,
       }}
     >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 rounded-[14px] shadow-[inset_0_0_32px_rgba(255,119,130,0.06)]"
-      />
-
       <div className="relative z-10 p-5 md:p-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
           <h3 className="text-xl font-bold text-white md:text-[22px]">
             {audience.title}
           </h3>
           <span
-            className={`inline-flex w-fit shrink-0 items-center justify-center rounded-full px-3 py-1 text-[9px] font-bold uppercase tracking-[0.1em] ${
-              badgeFilled
-                ? "bg-[#FF7782] text-[#1B0002]"
+            className={`inline-flex w-fit shrink-0 items-center justify-center rounded-full px-3 py-1 text-[9px] font-bold uppercase tracking-[0.1em] transition-colors duration-300 ${
+              active
+                ? "border border-[#FF7782] bg-[#FF7782] text-[#1B0002]"
                 : "border border-[#FF7782] bg-transparent text-[#FF7782]"
             }`}
           >
@@ -50,6 +52,8 @@ function AudienceCard({ audience }) {
 }
 
 const VisibilitySection = () => {
+  const [activeId, setActiveId] = useState(whoItsForAudiences[0]?.id);
+
   return (
     <section className="relative w-full overflow-x-clip bg-[#1B0002] py-16 md:py-20 lg:py-24">
       <div className="mx-auto grid max-w-[1280px] items-start gap-10 px-3 min-[375px]:px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] lg:gap-12 xl:grid-cols-[1fr_440px] lg:px-8">
@@ -79,7 +83,12 @@ const VisibilitySection = () => {
 
         <div className="flex flex-col gap-4 md:gap-5">
           {whoItsForAudiences.map((audience) => (
-            <AudienceCard key={audience.id} audience={audience} />
+            <AudienceCard
+              key={audience.id}
+              audience={audience}
+              active={activeId === audience.id}
+              onActivate={() => setActiveId(audience.id)}
+            />
           ))}
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { FaChevronDown } from "react-icons/fa";
+import { FaChevronDown, FaRegCalendarCheck } from "react-icons/fa";
 import {
   landingHeroAssets,
   landingHeroStats,
@@ -67,12 +67,9 @@ const HeroSection = () => {
                 rel="noopener noreferrer"
                 className="inline-flex shrink-0 items-center justify-center gap-2.5 rounded-full bg-[#FF7782] px-5 py-3 text-sm font-semibold text-[#1B0002] shadow-[0_8px_28px_rgba(255,119,130,0.35)] transition-colors hover:bg-[#ff6875] sm:px-7 sm:py-3.5 sm:text-base"
               >
-                <Image
-                  src="/Schedule.svg"
-                  alt=""
-                  width={24}
-                  height={24}
-                  className="h-6 w-6 shrink-0"
+                <FaRegCalendarCheck
+                  aria-hidden
+                  className="h-[18px] w-[18px] shrink-0 text-[#1B0002]"
                 />
                 Book my free call
               </a>

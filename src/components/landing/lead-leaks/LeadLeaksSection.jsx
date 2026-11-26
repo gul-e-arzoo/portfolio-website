@@ -24,7 +24,7 @@ function LeadLeakCard({ card }) {
 
 function MarqueeTrack() {
   return (
-    <div className="flex shrink-0 gap-4 sm:gap-5">
+    <div className="flex shrink-0 gap-4 pr-4 sm:gap-5 sm:pr-5">
       {leadLeakCards.map((card) => (
         <LeadLeakCard key={card.id} card={card} />
       ))}
