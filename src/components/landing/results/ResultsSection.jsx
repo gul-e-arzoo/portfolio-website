@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
+import ClientSpotlight from "./ClientSpotlight";
 import {
   packageReviewImages,
   packageReviewsIntro,
@@ -83,6 +84,8 @@ const ResultsSection = () => {
             sizes="100vw"
           />
         </div>
+
+        <ClientSpotlight />
 
         <div
           id="package-reviews"

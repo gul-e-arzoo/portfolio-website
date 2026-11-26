@@ -119,3 +119,15 @@ main > section#portfolio {
     padding-top: 0;
   }
 }
+
+/* Client spotlight cards: soft fade-up when the quote changes */
+.client-spotlight {
+  animation: spotlightIn 600ms ease-out both;
+}
+@keyframes spotlightIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .client-spotlight { animation: none; }
+}
