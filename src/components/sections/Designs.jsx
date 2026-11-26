@@ -37,7 +37,7 @@ function GalleryGridTile({ item, isLinkedInTab }) {
     <div
       className={`group shrink-0 overflow-hidden ${
         isBanner
-          ? `rounded-xl bg-white p-3 sm:p-4 ${BANNER_TILE_WIDTH}`
+          ? `rounded-xl bg-[#FFEFF1] p-3 sm:p-4 ${BANNER_TILE_WIDTH}`
           : `rounded-md ${CARD_TILE_WIDTH}`
       }`}
     >
