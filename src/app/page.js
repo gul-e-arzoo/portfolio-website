@@ -1,3 +1,4 @@
+import BrandHashScroll from "@/components/layout/BrandHashScroll";
 import {
   LandingHero,
   LeadLeaksSection,
@@ -13,6 +14,7 @@ import {
 export default function Home() {
   return (
     <>
+      <BrandHashScroll />
       <LandingHero />
       <LeadLeaksSection />
       <PlugLeaksSection />

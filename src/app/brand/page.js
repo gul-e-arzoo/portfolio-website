@@ -1,11 +1,10 @@
 import BrandHashScroll from "@/components/layout/BrandHashScroll";
 import {
   Hero,
-  CollegeGrid,
+  PortfolioGallery,
   Review,
   Steps,
   Designs,
-  Products,
   Mastermind,
 } from "@/components/sections";
 
@@ -14,11 +13,10 @@ export default function BrandPage() {
     <>
       <BrandHashScroll />
       <Hero />
-      <CollegeGrid />
+      <PortfolioGallery />
       <Review />
       <Steps />
       <Designs />
-      <Products />
       <Mastermind />
     </>
   );

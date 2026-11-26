@@ -23,7 +23,7 @@ function notifyHashChange() {
 }
 
 function getActiveNavLabel(pathname, hash) {
-  if (pathname === "/") return "Home";
+  if (pathname === "/") return hash === "#pricing" ? "Pricing" : "Home";
   if (pathname === "/brand") {
     const id = hash.replace(/^#/, "");
     const match = navLinks.find((l) => l.id === id);
@@ -111,13 +111,14 @@ const Navbar = () => {
     setMenuOpen(false);
 
     if (link.href === "/") {
+      const target = link.id || "hero";
       if (pathname === "/") {
-        document.getElementById("hero")?.scrollIntoView({
+        document.getElementById(target)?.scrollIntoView({
           behavior: "smooth",
           block: "start",
         });
       } else {
-        router.push("/");
+        router.push(target === "hero" ? "/" : `/#${target}`);
       }
       return;
     }

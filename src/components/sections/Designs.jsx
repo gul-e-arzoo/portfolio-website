@@ -10,13 +10,12 @@ import {
 } from "@/constants";
 import AnimatedContainer from "@/components/ui/AnimatedContainer";
 
-const GALLERY_PREVIEW_COUNT = 6;
 const IMAGES_PER_ROW = 3;
 const GALLERY_TILE_WIDTH =
   "w-[min(72vw,210px)] shrink-0 min-[375px]:w-[min(78vw,240px)] min-[425px]:w-[min(82vw,260px)] sm:w-[280px] md:w-[320px] lg:w-[360px]";
 
 const toggleButtonClass =
-  "rounded-full border border-[#FF7782] bg-transparent px-5 py-2.5 text-[10px] font-semibold text-white transition-all duration-200 hover:bg-[#FF7782] hover:text-[#1B0002] min-[375px]:px-6 min-[375px]:py-3 min-[375px]:text-[11px] sm:px-8 sm:text-xs";
+  "cursor-pointer bg-transparent text-[13px] font-semibold text-[#FF7782] underline decoration-[#FF7782]/60 underline-offset-4 transition-colors duration-200 hover:text-white hover:decoration-white sm:text-sm";
 
 const LINKEDIN_BANNER_MAX_H = 220;
 
@@ -65,7 +64,7 @@ function GalleryGridTile({ item, isLinkedInTab, layout = "marquee" }) {
   );
 }
 
-function GalleryMarqueeRow({ items, rowKey, durationSec, isLinkedInTab }) {
+function GalleryMarqueeRow({ items, rowKey, durationSec, isLinkedInTab, reverse = false }) {
   const loopItems = [...items, ...items];
 
   return (
@@ -81,7 +80,7 @@ function GalleryMarqueeRow({ items, rowKey, durationSec, isLinkedInTab }) {
       <div
         className="portfolio-gallery-marquee-track flex w-max items-center gap-3 px-3 will-change-transform sm:gap-4 sm:px-4"
         style={{
-          animation: `marqueeHorizontalRtl ${durationSec}s linear infinite`,
+          animation: `${reverse ? "marqueeHorizontalLtr" : "marqueeHorizontalRtl"} ${durationSec}s linear infinite`,
         }}
       >
         {loopItems.map((item, index) => (
@@ -96,21 +95,6 @@ function GalleryMarqueeRow({ items, rowKey, durationSec, isLinkedInTab }) {
   );
 }
 
-function GalleryStaticGrid({ items, isLinkedInTab }) {
-  return (
-    <div className="mx-auto grid max-w-[1120px] grid-cols-1 items-start gap-3 px-4 sm:grid-cols-2 sm:gap-[10px] lg:grid-cols-3 lg:px-8">
-      {items.map((item) => (
-        <GalleryGridTile
-          key={item.id}
-          item={item}
-          isLinkedInTab={isLinkedInTab}
-          layout="grid"
-        />
-      ))}
-    </div>
-  );
-}
-
 const CASE_STUDY_TAGS = [
   "Profile Optimization",
   "Content Design",
@@ -121,29 +105,95 @@ const cornerGlowBg = `radial-gradient(ellipse 90% 75% at 0% 0%, rgba(255,119,130
   radial-gradient(ellipse 80% 70% at 100% 0%, rgba(255,119,130,0.14), transparent 52%),
   radial-gradient(ellipse 70% 60% at 100% 100%, rgba(255,119,130,0.1), transparent 48%)`;
 
-const Designs = () => {
+const PREVIEW_ROWS = 2;
+
+/** Work samples right under the hero: tabs, then rows that drift in
+    alternating directions. Two rows show first; View more adds the rest. */
+export function PortfolioGallery() {
   const [activeFilter, setActiveFilter] = useState(portfolioFilters[0]);
-  const [galleryExpanded, setGalleryExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const galleryItems = useMemo(
     () => portfolioGalleryByFilter[activeFilter] ?? [],
     [activeFilter],
   );
-
   const isLinkedInTab = activeFilter === "LinkedIn Branding";
+  const rows = useMemo(() => chunkRows(galleryItems, IMAGES_PER_ROW), [galleryItems]);
+  const visibleRows = expanded ? rows : rows.slice(0, PREVIEW_ROWS);
+  const canExpand = rows.length > PREVIEW_ROWS;
 
-  const previewItems = useMemo(
-    () => galleryItems.slice(0, GALLERY_PREVIEW_COUNT),
-    [galleryItems],
+  return (
+    <section
+      id="portfolio"
+      className="relative w-full overflow-x-clip pb-14 pt-2 md:pb-16 lg:pb-20"
+    >
+      <div className="mx-auto flex max-w-[1120px] flex-wrap items-center justify-center gap-2 px-4">
+        {portfolioFilters.map((filter) => {
+          const isActive = activeFilter === filter;
+          return (
+            <button
+              key={filter}
+              type="button"
+              onClick={() => {
+                setActiveFilter(filter);
+                setExpanded(false);
+              }}
+              className={`cursor-pointer rounded-full border px-5 py-[7px] text-[11px] font-medium transition-all duration-200 sm:text-xs ${
+                isActive
+                  ? "border-[#FF7782] bg-[#FF7782] text-[#1B0002]"
+                  : "border-[#FF7782] bg-transparent text-white hover:bg-[#FF7782]/10"
+              }`}
+            >
+              {filter}
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="relative mt-8 w-full">
+        {galleryItems.length === 0 ? (
+          <p className="py-16 text-center text-sm text-white/60">
+            No projects available for this service yet.
+          </p>
+        ) : (
+          <div key={activeFilter} className="space-y-3 sm:space-y-4">
+            {visibleRows.map((rowItems, rowIndex) => (
+              <GalleryMarqueeRow
+                key={`${activeFilter}-row-${rowIndex}`}
+                rowKey={`${activeFilter}-row-${rowIndex}`}
+                items={rowItems}
+                isLinkedInTab={isLinkedInTab}
+                reverse={rowIndex % 2 === 1}
+                durationSec={Math.max(28, rowItems.length * 9)}
+              />
+            ))}
+          </div>
+        )}
+
+        {canExpand && (
+          <div className="flex justify-center pt-6">
+            <button
+              type="button"
+              className={toggleButtonClass}
+              onClick={() => {
+                if (expanded) {
+                  document
+                    .getElementById("portfolio")
+                    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+                setExpanded(!expanded);
+              }}
+            >
+              {expanded ? "View less" : "View more"}
+            </button>
+          </div>
+        )}
+      </div>
+    </section>
   );
+}
 
-  const previewRows = useMemo(
-    () => chunkRows(previewItems, IMAGES_PER_ROW),
-    [previewItems],
-  );
-
-  const canToggleGallery = galleryItems.length > GALLERY_PREVIEW_COUNT;
-
+const Designs = () => {
   const caseStudies = useMemo(
     () => [...design].sort((a, b) => (a.id ?? 0) - (b.id ?? 0)),
     [],
@@ -151,128 +201,6 @@ const Designs = () => {
 
   return (
     <>
-      {/* =========================================================
-          PORTFOLIO GALLERY
-      ========================================================== */}
-      <section
-        id="portfolio"
-        className="relative w-full overflow-x-clip pb-14 pt-16 min-[375px]:pt-20 md:pb-16 md:pt-24 lg:pb-20 lg:pt-28"
-      >
-        {/* Header */}
-        <div className="mx-auto w-full max-w-[1120px] px-3 min-[375px]:px-4 sm:px-6 lg:px-8">
-          <AnimatedContainer animationType="fade-up">
-            <div className="mx-auto max-w-[850px] text-center">
-              {/* Label */}
-              <div className="mb-4 flex justify-center">
-                <span className="inline-flex min-h-[30px] items-center justify-center rounded-full border border-[#FF7782] px-5 py-1.5 text-[9px] font-medium uppercase tracking-[0.02em] text-white">
-                  What I&apos;ve Made
-                </span>
-              </div>
-
-              {/* Heading */}
-              <h2 className="text-[26px] font-bold leading-[1.08] tracking-[-0.04em] text-white min-[375px]:text-[30px] sm:text-[38px] md:text-[44px] lg:text-[48px]">
-                Real profiles. Real people.{" "}
-                <span className="text-[#FF7782]">Real results.</span>
-                <br />
-                Pick a service to see the work.
-              </h2>
-
-              {/* Subtitle */}
-              <p className="mt-4 text-[11px] leading-relaxed text-white/75 sm:text-xs md:text-[13px]">
-                Every profile below was built from scratch for one person, in their voice.
-              </p>
-            </div>
-          </AnimatedContainer>
-
-          {/* Filters */}
-          <AnimatedContainer animationType="fade-up" delay={0.08}>
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-2">
-              {portfolioFilters.map((filter) => {
-                const isActive = activeFilter === filter;
-
-                return (
-                  <button
-                    key={filter}
-                    type="button"
-                    onClick={() => {
-                      setActiveFilter(filter);
-                      setGalleryExpanded(false);
-                    }}
-                    className={`rounded-full border px-5 py-[7px] text-[10px] font-medium transition-all duration-200 sm:text-[11px] ${
-                      isActive
-                        ? "border-[#FF7782] bg-[#FF7782] text-white"
-                        : "border-[#FF7782] bg-transparent text-white hover:bg-[#FF7782]/10"
-                    }`}
-                  >
-                    {filter}
-                  </button>
-                );
-              })}
-            </div>
-          </AnimatedContainer>
-        </div>
-
-        <div className="relative mt-8 w-full">
-          {galleryItems.length === 0 && (
-            <div className="mx-auto max-w-[1120px] px-4 py-16 text-center">
-              <p className="text-sm text-white/60">
-                No projects available for this service yet.
-              </p>
-            </div>
-          )}
-
-          {galleryItems.length > 0 && (
-            <div key={`${activeFilter}-${galleryExpanded ? "all" : "preview"}`}>
-              {galleryExpanded ? (
-                <GalleryStaticGrid
-                  items={galleryItems}
-                  isLinkedInTab={isLinkedInTab}
-                />
-              ) : (
-                <div className="space-y-3 sm:space-y-4">
-                  {previewRows.map((rowItems, rowIndex) => (
-                    <GalleryMarqueeRow
-                      key={`${activeFilter}-row-${rowIndex}`}
-                      rowKey={`${activeFilter}-row-${rowIndex}`}
-                      items={rowItems}
-                      isLinkedInTab={isLinkedInTab}
-                      durationSec={Math.max(28, rowItems.length * 9)}
-                    />
-                  ))}
-                </div>
-              )}
-
-              {canToggleGallery && (
-                <div className="mx-auto flex max-w-[1120px] justify-center px-4 pt-4 sm:pt-6">
-                  {galleryExpanded ? (
-                    <button
-                      type="button"
-                      className={toggleButtonClass}
-                      onClick={() => {
-                        setGalleryExpanded(false);
-                        document
-                          .getElementById("portfolio")
-                          ?.scrollIntoView({ behavior: "smooth", block: "start" });
-                      }}
-                    >
-                      View less
-                    </button>
-                  ) : (
-                    <button
-                      type="button"
-                      className={toggleButtonClass}
-                      onClick={() => setGalleryExpanded(true)}
-                    >
-                      View more
-                    </button>
-                  )}
-                </div>
-              )}
-            </div>
-          )}
-        </div>
-      </section>
-
       {/* =========================================================
           PROFILE REVAMP DESIGNS
       ========================================================== */}
