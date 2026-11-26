@@ -7,7 +7,6 @@ function caseAsset(filename) {
 export const portfolioFilters = [
   "LinkedIn Branding",
   "Content Creation",
-  "Web Designs",
 ];
 
 export const design = [
