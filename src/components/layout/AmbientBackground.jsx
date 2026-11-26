@@ -135,7 +135,7 @@ const AmbientBackground = () => {
     <canvas
       ref={ref}
       aria-hidden
-      className="pointer-events-none fixed inset-0 z-[90] h-full w-full opacity-[0.38] mix-blend-screen"
+      className="pointer-events-none fixed inset-0 z-0 h-full w-full opacity-[0.45] mix-blend-screen"
     />
   );
 };

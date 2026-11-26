@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative w-full overflow-x-clip bg-[#1B0002] pb-14 pt-24 min-[375px]:pt-28 md:pb-20 md:pt-32"
+      className="relative w-full overflow-x-clip pb-14 pt-24 min-[375px]:pt-28 md:pb-20 md:pt-32"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_35%,rgba(255,119,130,0.18),transparent_70%)]"

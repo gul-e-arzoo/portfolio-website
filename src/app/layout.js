@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
       <body className="flex min-h-full min-w-0 flex-col overflow-x-clip bg-[#1B0002] text-white">
         <AmbientBackground />
         <Navbar />
-        <main className="min-w-0 flex-1">{children}</main>
+        <main className="relative z-[1] min-w-0 flex-1">{children}</main>
         <Footer />
       </body>
     </html>

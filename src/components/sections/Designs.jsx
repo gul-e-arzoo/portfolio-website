@@ -156,7 +156,7 @@ const Designs = () => {
       ========================================================== */}
       <section
         id="portfolio"
-        className="relative w-full overflow-x-clip bg-[#1B0002] pb-14 pt-16 min-[375px]:pt-20 md:pb-16 md:pt-24 lg:pb-20 lg:pt-28"
+        className="relative w-full overflow-x-clip pb-14 pt-16 min-[375px]:pt-20 md:pb-16 md:pt-24 lg:pb-20 lg:pt-28"
       >
         {/* Header */}
         <div className="mx-auto w-full max-w-[1120px] px-3 min-[375px]:px-4 sm:px-6 lg:px-8">
@@ -278,7 +278,7 @@ const Designs = () => {
       ========================================================== */}
       <section
         id="reviews"
-        className="relative w-full overflow-hidden bg-[#1B0002] pb-24 pt-10 md:pb-28 md:pt-14 lg:pb-32"
+        className="relative w-full overflow-hidden pb-24 pt-10 md:pb-28 md:pt-14 lg:pb-32"
       >
         {/* Subtle Background Glow */}
         <div className="pointer-events-none absolute left-1/2 top-[35%] h-[900px] w-[1000px] -translate-x-1/2 rounded-full bg-[#7B1F28]/10 blur-[170px]" />

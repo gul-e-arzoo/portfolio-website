@@ -17,7 +17,7 @@ const ICONS = {
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-[#1B0002]">
+    <footer className="relative z-[1] w-full">
       <div className="mx-auto max-w-[1280px] px-4 pb-8 pt-14 sm:px-6 md:pt-16 lg:px-8">
         {/* Logo: picture + name, centred */}
         <div className="flex flex-col items-center text-center">

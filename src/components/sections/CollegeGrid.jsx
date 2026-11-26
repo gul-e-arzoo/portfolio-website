@@ -124,7 +124,7 @@ const CollageGrid = () => {
   }, []);
 
   return (
-    <section className="w-full overflow-x-clip bg-[#1B0002]">
+    <section className="w-full overflow-x-clip">
       <div className="mx-auto w-full ">
         <AnimatedContainer animationType="fade-up" delay={0.2}>
           <div className="absolute -left-2499.75 -top-2499.75 opacity-0 pointer-events-none">

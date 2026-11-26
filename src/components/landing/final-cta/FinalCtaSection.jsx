@@ -9,7 +9,7 @@ const cornerGlowBg = `radial-gradient(ellipse 90% 75% at 0% 0%, rgba(255,119,130
 
 const FinalCtaSection = () => {
   return (
-    <section className="relative w-full overflow-x-clip bg-[#1B0002] py-16 md:py-24">
+    <section className="relative w-full overflow-x-clip py-16 md:py-24">
       <div className="relative mx-auto max-w-[1120px] px-3 min-[375px]:px-4 sm:px-6">
         <div className="relative isolate">
           <div

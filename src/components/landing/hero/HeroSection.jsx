@@ -20,7 +20,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative w-full overflow-x-clip bg-[#1B0002] pt-24 min-[375px]:pt-28 md:pt-32"
+      className="relative w-full overflow-x-clip pt-24 min-[375px]:pt-28 md:pt-32"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_20%_30%,rgba(255,119,130,0.12),transparent_65%)]"

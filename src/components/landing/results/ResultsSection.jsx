@@ -48,7 +48,7 @@ const ResultsSection = () => {
   return (
     <section
       id="results"
-      className="relative w-full overflow-x-clip bg-[#1B0002] py-14 md:py-16 lg:py-20"
+      className="relative w-full overflow-x-clip py-14 md:py-16 lg:py-20"
     >
       <div className="mx-auto max-w-[1100px] px-3 min-[375px]:px-4 sm:px-6">
         <SectionIntro intro={resultsIntro} />

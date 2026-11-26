@@ -69,7 +69,7 @@ const Steps = () => {
   return (
     <section
       id="services"
-      className="relative w-full overflow-x-clip bg-[#1B0002] py-14 min-[375px]:py-20 md:py-24 lg:py-28"
+      className="relative w-full overflow-x-clip py-14 min-[375px]:py-20 md:py-24 lg:py-28"
     >
       <div className="relative z-10 mx-auto w-full max-w-[1040px] px-3 min-[375px]:px-4 sm:px-6">
         {/* Header */}

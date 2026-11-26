@@ -47,7 +47,7 @@ const PlugLeaksSection = () => {
   };
 
   return (
-    <section className="relative w-full overflow-x-clip bg-[#1B0002] py-16 md:py-20 lg:py-24">
+    <section className="relative w-full overflow-x-clip py-16 md:py-20 lg:py-24">
       {/* Ambient light behind card stack */}
       <div
         className="pointer-events-none absolute right-[5%] top-[42%] h-[520px] w-[420px] -translate-y-1/2 bg-[radial-gradient(ellipse_at_center,rgba(255,119,130,0.22),rgba(255,119,130,0.08)_45%,transparent_72%)] sm:right-[8%] md:h-[680px] md:w-[520px] lg:right-[12%]"

@@ -111,7 +111,7 @@ const PricingSection = () => {
   return (
     <section
       id="pricing"
-      className="relative w-full overflow-x-clip bg-[#1B0002] py-16 md:py-20 lg:py-24"
+      className="relative w-full overflow-x-clip py-16 md:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-[1100px] px-3 min-[375px]:px-4 sm:px-6">
         <div className="text-center">

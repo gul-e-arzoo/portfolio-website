@@ -55,7 +55,7 @@ const VisibilitySection = () => {
   const [activeId, setActiveId] = useState(whoItsForAudiences[0]?.id);
 
   return (
-    <section className="relative w-full overflow-x-clip bg-[#1B0002] py-16 md:py-20 lg:py-24">
+    <section className="relative w-full overflow-x-clip py-16 md:py-20 lg:py-24">
       <div className="mx-auto grid max-w-[1280px] items-start gap-10 px-3 min-[375px]:px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] lg:gap-12 xl:grid-cols-[1fr_440px] lg:px-8">
         <div>
           <div className="mb-5 flex justify-start">

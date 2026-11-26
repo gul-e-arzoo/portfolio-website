@@ -81,7 +81,7 @@ export const Review = () => {
   return (
     <section
       id="featured-testimonials"
-      className="relative w-full overflow-x-clip bg-[#1B0002] py-14 min-[375px]:py-20 md:py-24 lg:py-28"
+      className="relative w-full overflow-x-clip py-14 min-[375px]:py-20 md:py-24 lg:py-28"
     >
       <div className="pointer-events-none absolute left-1/2 top-[56%] h-[650px] w-[950px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#7A252D]/20 blur-[150px]" />
 

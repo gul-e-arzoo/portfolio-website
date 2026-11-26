@@ -5,7 +5,7 @@ import { FaLinkedin, FaWhatsapp, FaBehance } from "react-icons/fa";
 import Button from "@/components/ui/Button";
 const Mastermind = () => {
   return (
-    <section id="about" className="relative bg-[#1B0002]">
+    <section id="about" className="relative">
       <Image
         src="/mastermind-bottom-blurr.svg"
         alt="bg effect"

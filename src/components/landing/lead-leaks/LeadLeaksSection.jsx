@@ -36,7 +36,7 @@ const LeadLeaksSection = () => {
   return (
     <section
       id="what-i-do"
-      className="relative w-full overflow-x-clip bg-[#1B0002] py-14 min-[375px]:py-16 md:py-20 lg:py-24"
+      className="relative w-full overflow-x-clip py-14 min-[375px]:py-16 md:py-20 lg:py-24"
     >
       <div className="mx-auto max-w-[1280px] px-3 min-[375px]:px-4 sm:px-6 lg:px-8">
         <div className="text-center">

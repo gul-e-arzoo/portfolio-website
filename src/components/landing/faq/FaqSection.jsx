@@ -27,7 +27,7 @@ const FaqSection = () => {
   const [openId, setOpenId] = useState(landingFaqs[0]?.id ?? null);
 
   return (
-    <section id="faq" className="relative w-full overflow-x-clip bg-[#1B0002] py-14 min-[375px]:py-16 md:py-20 lg:py-24">
+    <section id="faq" className="relative w-full overflow-x-clip py-14 min-[375px]:py-16 md:py-20 lg:py-24">
       <div className="mx-auto max-w-[720px] px-3 min-[375px]:px-4 sm:px-6">
         <div className="text-center">
           <div className="mb-5 flex justify-center">
