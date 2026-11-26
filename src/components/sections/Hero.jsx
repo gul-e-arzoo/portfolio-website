@@ -28,13 +28,13 @@ const Hero = () => {
         </div>
 
         <div className="text-center">
-          <h1 className="font-bricolage text-[26px] font-bold leading-[1.12] text-[#fff1f3] min-[375px]:text-3xl sm:text-5xl lg:text-[64px]">
+          <h1 className="font-bricolage text-[26px] font-bold leading-[1.12] text-[#fff1f3] min-[375px]:text-[28px] sm:text-5xl lg:text-[64px]">
             The{" "}
             <span className="text-[#FF7782]">Home of Premium</span>
           </h1>
 
-          <div className="mt-2 flex flex-wrap items-center justify-center gap-2 md:gap-3">
-            <span className="font-bricolage text-[26px] font-bold text-[#fff1f3] min-[375px]:text-3xl sm:text-5xl lg:text-[64px]">
+          <div className="mt-1 flex flex-nowrap items-center justify-center gap-1.5 sm:mt-2 sm:gap-2 md:gap-3">
+            <span className="whitespace-nowrap font-bricolage text-[26px] font-bold text-[#fff1f3] min-[375px]:text-[28px] sm:text-5xl lg:text-[64px]">
               LinkedIn
             </span>
             <Image
@@ -42,11 +42,10 @@ const Hero = () => {
               alt=""
               width={72}
               height={72}
-              className="-rotate-6 h-10 w-10 shrink-0 min-[375px]:h-12 min-[375px]:w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-[72px] lg:w-[72px]"
-              style={{ width: "auto", height: "auto" }}
+              className="-rotate-6 h-8 w-8 shrink-0 min-[375px]:h-9 min-[375px]:w-9 sm:h-14 sm:w-14 md:h-16 md:w-16 lg:h-[72px] lg:w-[72px]"
               priority
             />
-            <span className="font-bricolage text-[26px] font-bold text-[#fff1f3] min-[375px]:text-3xl sm:text-5xl lg:text-[64px]">
+            <span className="whitespace-nowrap font-bricolage text-[26px] font-bold text-[#fff1f3] min-[375px]:text-[28px] sm:text-5xl lg:text-[64px]">
               Brand Design
             </span>
           </div>
