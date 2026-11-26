@@ -8,7 +8,8 @@ export default function BrandHashScroll() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (pathname !== "/brand" && pathname !== "/") return;
+    const path = (pathname || "/").replace(/\/+$/, "") || "/";
+    if (path !== "/brand" && path !== "/") return;
 
     const scrollToHash = () => {
       const hash = window.location.hash.replace("#", "");

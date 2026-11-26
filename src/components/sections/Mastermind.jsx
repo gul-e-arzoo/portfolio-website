@@ -17,8 +17,8 @@ const Mastermind = () => {
       <div className="mx-auto grid w-full max-w-360 grid-cols-1 items-center gap-8 px-4 py-12 min-[375px]:px-6 sm:px-8 sm:py-16 lg:grid-cols-2 lg:gap-10">
         <div className="order-2 w-full lg:order-1">
           <h1 className="text-2xl font-bold text-white min-[375px]:text-3xl sm:text-4xl md:text-5xl">
-            Meet the{" "}
-            <span className="text-[#FF7782] italic">mastermind</span>
+            Behind the{" "}
+            <span className="text-[#FF7782] italic">work</span>
           </h1>
 
           <p className="py-4 text-base text-white min-[375px]:py-5 min-[375px]:text-lg sm:text-xl">
@@ -50,7 +50,7 @@ const Mastermind = () => {
               rel="noopener noreferrer"
               className="flex-1 flex justify-center items-center gap-2 uppercase rounded-full sm:text-lg text-sm px-4 py-3"
             >
-              <FaLinkedin size={20} />
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white"><FaLinkedin size={18} color="#0A66C2" /></span>
               LinkedIn
             </Button>
 
@@ -60,7 +60,7 @@ const Mastermind = () => {
               rel="noopener noreferrer"
               className="flex-1 flex justify-center items-center gap-2 uppercase rounded-full sm:text-lg text-sm px-4 py-3"
             >
-              <FaWhatsapp size={20} />
+              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white"><FaWhatsapp size={18} color="#25D366" /></span>
               WhatsApp
             </Button>
 
@@ -70,10 +70,7 @@ const Mastermind = () => {
               rel="noopener noreferrer"
               className="flex-1 flex justify-center items-center gap-2 uppercase rounded-full sm:text-lg text-sm px-4 py-3"
             >
-              <FaBehance
-                size={24}
-                className="border border-white p-1 rounded-full"
-              />
+<span className="flex h-7 w-7 items-center justify-center rounded-full bg-white"><FaBehance size={17} color="#1769FF" /></span>
               Behance
             </Button>
           </div>

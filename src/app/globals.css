@@ -95,3 +95,27 @@ html {
   -ms-overflow-style: none;  
   scrollbar-width: none;     
 }
+
+
+/* ===== Consistent 120px gap between page sections (60px + 60px) ===== */
+main > section {
+  padding-bottom: 60px;
+}
+main > section:not(#hero) {
+  padding-top: 60px;
+}
+/* The Services page gallery belongs to its header, so it sits closer. */
+main > section#portfolio {
+  padding-top: 0;
+}
+@media (max-width: 767px) {
+  main > section {
+    padding-bottom: 40px;
+  }
+  main > section:not(#hero) {
+    padding-top: 40px;
+  }
+  main > section#portfolio {
+    padding-top: 0;
+  }
+}

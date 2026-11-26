@@ -22,12 +22,17 @@ function notifyHashChange() {
   }
 }
 
-function getActiveNavLabel(pathname, hash) {
+function normalizePath(p) {
+  return (p || "/").replace(/\/+$/, "") || "/";
+}
+
+function getActiveNavLabel(rawPathname, hash) {
+  const pathname = normalizePath(rawPathname);
   if (pathname === "/") return hash === "#pricing" ? "Pricing" : "Home";
   if (pathname === "/brand") {
     const id = hash.replace(/^#/, "");
-    const match = navLinks.find((l) => l.id === id);
-    return match?.label ?? "Services";
+    const match = navLinks.find((l) => l.href === "/brand" && l.id === id);
+    return match?.label ?? "Portfolio";
   }
   return "Home";
 }
@@ -112,7 +117,7 @@ const Navbar = () => {
 
     if (link.href === "/") {
       const target = link.id || "hero";
-      if (pathname === "/") {
+      if (normalizePath(pathname) === "/") {
         document.getElementById(target)?.scrollIntoView({
           behavior: "smooth",
           block: "start",
@@ -123,7 +128,7 @@ const Navbar = () => {
       return;
     }
 
-    if (pathname === link.href) {
+    if (normalizePath(pathname) === link.href) {
       document.getElementById(link.id)?.scrollIntoView({
         behavior: "smooth",
         block: "start",
@@ -180,7 +185,7 @@ const Navbar = () => {
         ========================================== */}
         <ul className="z-20 row-start-1 hidden min-w-0 max-w-full items-center justify-self-center gap-0.5 rounded-full border border-[#5B252A] bg-[#29070A] p-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_8px_30px_rgba(0,0,0,0.25)] md:col-start-2 md:col-end-3 md:flex md:gap-1 md:p-1.5 lg:gap-1">
           {navLinks.map((link) => (
-            <li key={link.id}>
+            <li key={link.label}>
               <button
                 type="button"
                 onClick={() => handleNavClick(link)}
@@ -237,7 +242,7 @@ const Navbar = () => {
           <div className="mx-auto max-w-[600px] px-4">
             <ul className="flex flex-col gap-2 py-5">
               {navLinks.map((link) => (
-                <li key={link.id}>
+                <li key={link.label}>
                   <button
                     type="button"
                     onClick={() => handleNavClick(link)}
