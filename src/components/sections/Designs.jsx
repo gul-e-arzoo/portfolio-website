@@ -166,7 +166,7 @@ export function PortfolioGallery() {
                 items={rowItems}
                 isLinkedInTab={isLinkedInTab}
                 reverse={rowIndex % 2 === 1}
-                durationSec={Math.max(36, rowItems.length * 9)}
+                durationSec={Math.max(31, rowItems.length * 9 - 5)}
               />
             ))}
           </div>
