@@ -91,7 +91,7 @@ The result speaks for itself; clean, professional, and it actually converts. I a
     id: 8,
     name: "Alnaz Alnaz",
     job: "Chief Humanisation Officer",
-    img: "/testimonials/C8.svg",
+    img: "/testimonials/C9.svg",
     info: `I came across Gul e Arzoo’s work when she created a profile revamp idea based on my LinkedIn profile. We didn’t work together directly, but I can see the effort she put into understanding my profile and designing everything with care.
 
 I appreciate her effort, creativity, and the time she spent researching before sharing her ideas. It clearly shows she is serious about her design work and pays attention to details.
@@ -103,7 +103,7 @@ Wishing her all the best for her journey on future projects :)`,
     id: 9,
     name: "Hasnat Ahmad",
     job: "UX/UI Designer for Startups & SaaS",
-    img: "/testimonials/C9.svg",
+    img: "/testimonials/C8.svg",
     info: `Working with Gul was genuinely collaborative and I really enjoyed it. She redesigned my whole LinkedIn profile and built me a 3-month content calendar that genuinely felt like it was made by a strategist.
 
 She understood what I was going for without me having to over-explain, and the output was amazing and actually useful. She didn't just help me organize content, she built a full strategy around it with real thinking behind every post.
