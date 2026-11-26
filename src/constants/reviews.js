@@ -1,5 +1,39 @@
 export const reviews = [
   {
+    id: 10,
+    name: "Raquel Alonso",
+    job: "CMO & Personal Brand Strategist",
+    img: "/testimonials/C10.jpg",
+    info: `I had the pleasure of working with Gul during my LinkedIn Visual Revamp Challenge.
+
+What I particularly loved about her work was how well she understood my personal brand and translated it into visuals that felt genuinely me.
+
+She made great use of my blue and white colour palette, creating a clean, cohesive look across my LinkedIn banners and Featured section thumbnails.
+
+I’d recommend Gul to execs and leaders looking to design a personal brand that feels authentic to who they are.`,
+    caseStudyLink: "#reviews",
+  },
+  {
+    id: 11,
+    name: "Sophie Frey",
+    job: "Leadership Advisor",
+    img: "/testimonials/C11.jpg",
+    info: `Gul’s approach to visibility on LI is very professional and practical: we had a conversation, and continued through many exchanges offline as the work was being over-delivered.
+
+I appreciated the support all the way, as a new tool for me was also used. As for results, it has already shown positive performance.`,
+    caseStudyLink: "#reviews",
+  },
+  {
+    id: 12,
+    name: "Patricia Sanna",
+    job: "Professional Resume Writer & Career Coach",
+    img: "/testimonials/C12.jpg",
+    info: `I had such a wonderful experience working with Gul! She created a new LinkedIn banner for me, and I couldn't be happier with the result. Gul took the time to understand what I was looking for and created something that was professional, polished, and truly reflected my brand.
+
+Their creativity, attention to detail, and ability to bring an idea to life really stood out. I sincerely appreciate the time and effort they put into making sure I was happy with the final design. I would highly recommend Gul to anyone looking for someone who is talented, creative, and genuinely cares about the quality of their work. Thank you again for doing such an amazing job!`,
+    caseStudyLink: "#reviews",
+  },
+  {
     id: 1,
     name: "Annaya (Imrana)",
     job: "Personal Brand Strategist",
