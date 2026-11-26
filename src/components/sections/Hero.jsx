@@ -21,7 +21,7 @@ const Hero = () => {
       />
 
       <div className="relative z-10 mx-auto max-w-[920px] px-3 min-[375px]:px-4 sm:px-6">
-        <div className="mb-8 flex flex-col items-center justify-center gap-3 sm:mb-10 sm:flex-row sm:flex-wrap sm:gap-4">
+        <div className="mb-3 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
           <Image
             src="/home_page/trust_bar.png"
             alt="Trusted by 25+ coaches, founders and fractional execs"

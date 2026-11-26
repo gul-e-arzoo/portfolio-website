@@ -30,7 +30,7 @@ const HeroSection = () => {
       <div className="relative z-10 mx-auto max-w-[1280px] px-3 min-[375px]:px-4 sm:px-6 lg:px-8">
         <div className="grid items-end gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,42%)] lg:gap-6 xl:grid-cols-[minmax(0,1fr)_460px]">
           <div className="pb-8 lg:pb-14">
-            <div className="mb-6 flex flex-wrap items-center gap-3 sm:mb-8">
+            <div className="mb-3 flex flex-wrap items-center gap-3">
               <Image
                 src="/home_page/trust_bar.png"
                 alt="Trusted by 25+ coaches, founders and fractional execs"
