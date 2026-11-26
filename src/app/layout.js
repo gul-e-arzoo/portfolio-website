@@ -49,15 +49,104 @@ const helveticaNeue = localFont({
   display: "swap",
 });
 
+const SITE_URL = "https://www.designwithgul.com";
+const SITE_DESCRIPTION =
+  "LinkedIn profile strategist for fractional CMOs, CFOs, CTOs and COOs. Profile rewrites, banners and done-for-you content that turn your LinkedIn into a client pipeline in 90 days.";
+
 export const metadata = {
-  title: "Gul e Arzoo | LinkedIn for Fractional Executives",
-  description:
-    "LinkedIn profiles and content for fractional CMOs, CFOs, CTOs and COOs. Turn your LinkedIn into a client pipeline in 90 days.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Gul e Arzoo | LinkedIn Profile Strategist for Fractional Executives",
+    template: "%s | Gul e Arzoo",
+  },
+  description: SITE_DESCRIPTION,
+  keywords: [
+    "LinkedIn profile strategist",
+    "LinkedIn for fractional executives",
+    "fractional CMO LinkedIn",
+    "fractional CFO LinkedIn",
+    "fractional CTO LinkedIn",
+    "fractional COO LinkedIn",
+    "LinkedIn profile optimization",
+    "LinkedIn banner design",
+    "LinkedIn ghostwriting",
+    "LinkedIn content management",
+    "personal branding for executives",
+  ],
+  authors: [{ name: "Gul e Arzoo", url: SITE_URL }],
+  creator: "Gul e Arzoo",
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: "Design with Gul",
+    title: "Gul e Arzoo | LinkedIn Profile Strategist for Fractional Executives",
+    description: SITE_DESCRIPTION,
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Gul e Arzoo, LinkedIn Profile Strategist for fractional executives",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gul e Arzoo | LinkedIn Profile Strategist for Fractional Executives",
+    description: SITE_DESCRIPTION,
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
   icons: {
     icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
     shortcut: [{ url: "/logo.svg", type: "image/svg+xml" }],
     apple: [{ url: "/logo.svg", type: "image/svg+xml" }],
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#gul`,
+      name: "Gul e Arzoo",
+      jobTitle: "LinkedIn Profile Strategist",
+      url: SITE_URL,
+      image: `${SITE_URL}/home_page/Arzoo.png`,
+      address: { "@type": "PostalAddress", addressLocality: "Karachi", addressCountry: "PK" },
+      sameAs: [
+        "https://www.linkedin.com/in/gul-executive-branding/",
+        "https://www.behance.net/gulearzoo82542",
+      ],
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${SITE_URL}/#service`,
+      name: "Design with Gul",
+      url: SITE_URL,
+      description: SITE_DESCRIPTION,
+      founder: { "@id": `${SITE_URL}/#gul` },
+      areaServed: ["United States", "United Kingdom", "Switzerland"],
+      serviceType: [
+        "LinkedIn profile optimization",
+        "LinkedIn content management",
+        "LinkedIn banner design",
+        "1:1 LinkedIn consultation",
+      ],
+      offers: [
+        { "@type": "Offer", name: "Founder-Ready LinkedIn Profile", price: "149", priceCurrency: "USD" },
+        { "@type": "Offer", name: "1:1 LinkedIn Consultation", price: "100", priceCurrency: "USD" },
+        { "@type": "Offer", name: "90-Day LinkedIn Management" },
+      ],
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {
@@ -67,6 +156,10 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} ${bricolageGrotesque.variable} ${playfairDisplay.variable} ${helveticaNeue.variable} h-full overflow-x-clip antialiased`}
     >
       <body className="flex min-h-full min-w-0 flex-col overflow-x-clip bg-[#1B0002] text-white">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <AmbientBackground />
         <Navbar />
         <main className="relative z-[1] min-w-0 flex-1">{children}</main>

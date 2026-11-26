@@ -170,9 +170,9 @@ const Navbar = () => {
           </div>
 
           <div className="hidden min-w-0 leading-tight lg:block">
-            <h1 className="whitespace-nowrap text-base font-bold text-white xl:text-lg">
+            <p className="whitespace-nowrap text-base font-bold text-white xl:text-lg">
               Gul e Arzoo
-            </h1>
+            </p>
 
             <p className="mt-0.5 whitespace-nowrap text-xs text-white/65 xl:text-[13px]">
               LinkedIn Profile Strategist

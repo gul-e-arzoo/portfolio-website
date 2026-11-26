@@ -8,10 +8,10 @@ const Mastermind = () => {
     <section id="about" className="relative">
       <div className="mx-auto grid w-full max-w-360 grid-cols-1 items-center gap-8 px-4 py-12 min-[375px]:px-6 sm:px-8 sm:py-16 lg:grid-cols-2 lg:gap-10">
         <div className="order-2 w-full text-center lg:order-1 lg:text-left">
-          <h1 className="text-2xl font-bold text-white min-[375px]:text-3xl sm:text-4xl md:text-5xl">
+          <h2 className="text-2xl font-bold text-white min-[375px]:text-3xl sm:text-4xl md:text-5xl">
             Behind the{" "}
             <span className="text-[#FF7782] italic">work</span>
-          </h1>
+          </h2>
 
           <p className="py-4 text-base text-white min-[375px]:py-5 min-[375px]:text-lg sm:text-xl">
             Hi, I&apos;m Gul e Arzoo, a LinkedIn Profile Strategist. I help

@@ -113,13 +113,13 @@ export const portfolioGalleryByFilter = {
     FOLDERS.linkedInBranding,
     linkedInBrandingFiles,
     "linkedin",
-    "LinkedIn branding work",
+    "LinkedIn banner and profile redesign by Gul e Arzoo",
   ),
   "Content Creation": mapGalleryItems(
     FOLDERS.contentCreation,
     contentCreationFiles,
     "content",
-    "Content creation work",
+    "LinkedIn carousel and infographic design by Gul e Arzoo",
   ),
   "Web Designs": mapGalleryItems(
     FOLDERS.webDesigns,
