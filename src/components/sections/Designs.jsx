@@ -11,8 +11,6 @@ import {
 import AnimatedContainer from "@/components/ui/AnimatedContainer";
 
 const IMAGES_PER_ROW = 3;
-const GALLERY_TILE_WIDTH =
-  "w-[min(72vw,210px)] shrink-0 min-[375px]:w-[min(78vw,240px)] min-[425px]:w-[min(82vw,260px)] sm:w-[280px] md:w-[320px] lg:w-[360px]";
 
 const toggleButtonClass =
   "cursor-pointer bg-transparent text-[13px] font-semibold text-[#FF7782] underline decoration-[#FF7782]/60 underline-offset-4 transition-colors duration-200 hover:text-white hover:decoration-white sm:text-sm";
@@ -27,38 +25,27 @@ function chunkRows(items, size = IMAGES_PER_ROW) {
   return rows;
 }
 
-function GalleryGridTile({ item, isLinkedInTab, layout = "marquee" }) {
-  const isBanner = isLinkedInTab && item.height < LINKEDIN_BANNER_MAX_H;
-  const widthClass = layout === "grid" ? "w-full" : GALLERY_TILE_WIDTH;
+/* Big tiles so a row of 3 is wider than the screen: each piece shows once,
+   then the next, with no copy of the same design visible at the same time. */
+const BANNER_TILE_WIDTH = "w-[86vw] sm:w-[62vw] lg:w-[42vw]";
+const CARD_TILE_WIDTH = "w-[86vw] sm:w-[48vw] lg:w-[34vw]";
 
-  if (isBanner) {
-    return (
-      <div
-        className={`group flex h-[130px] items-center justify-center overflow-hidden rounded-sm bg-white leading-none shadow-[0_2px_12px_rgba(0,0,0,0.1)] min-[375px]:h-[150px] sm:h-[168px] md:h-[178px] ${widthClass}`}
-      >
-        <Image
-          src={item.src}
-          alt={item.alt}
-          width={item.width}
-          height={item.height}
-          sizes="360px"
-          className="max-h-full max-w-full object-contain object-center transition-transform duration-500 group-hover:scale-[1.02]"
-        />
-      </div>
-    );
-  }
+function GalleryGridTile({ item, isLinkedInTab }) {
+  const isBanner = isLinkedInTab && item.height < LINKEDIN_BANNER_MAX_H;
 
   return (
     <div
-      className={`group relative overflow-hidden bg-white ${widthClass}`}
-      style={{ aspectRatio: `${item.width} / ${item.height}` }}
+      className={`group shrink-0 overflow-hidden rounded-xl bg-white p-3 shadow-[0_2px_12px_rgba(0,0,0,0.12)] sm:p-4 ${
+        isBanner ? BANNER_TILE_WIDTH : CARD_TILE_WIDTH
+      }`}
     >
       <Image
         src={item.src}
         alt={item.alt}
-        fill
-        sizes="360px"
-        className="object-contain object-center transition-transform duration-500 group-hover:scale-[1.01]"
+        width={item.width}
+        height={item.height}
+        sizes="(max-width: 640px) 86vw, (max-width: 1024px) 62vw, 42vw"
+        className="block h-auto w-full rounded-md transition-transform duration-500 group-hover:scale-[1.01]"
       />
     </div>
   );
@@ -78,7 +65,7 @@ function GalleryMarqueeRow({ items, rowKey, durationSec, isLinkedInTab, reverse 
         aria-hidden
       />
       <div
-        className="portfolio-gallery-marquee-track flex w-max items-center gap-3 px-3 will-change-transform sm:gap-4 sm:px-4"
+        className="portfolio-gallery-marquee-track flex w-max items-center gap-4 pr-4 will-change-transform"
         style={{
           animation: `${reverse ? "marqueeHorizontalLtr" : "marqueeHorizontalRtl"} ${durationSec}s linear infinite`,
         }}
@@ -164,7 +151,7 @@ export function PortfolioGallery() {
                 items={rowItems}
                 isLinkedInTab={isLinkedInTab}
                 reverse={rowIndex % 2 === 1}
-                durationSec={Math.max(28, rowItems.length * 9)}
+                durationSec={Math.max(36, rowItems.length * 14)}
               />
             ))}
           </div>
