@@ -79,7 +79,7 @@ const ProcessSection = () => {
         {/* Stacking cards: each card sticks a little lower than the one
             before it, so the next card slides up over the previous one and
             leaves its top edge showing. */}
-        <div className="mt-9 flex flex-col gap-10 md:mt-10 md:gap-16">
+        <div className="mt-9 flex flex-col gap-5 md:mt-10">
           {processPhases.map((phase, index) => (
             <div
               key={phase.id}
