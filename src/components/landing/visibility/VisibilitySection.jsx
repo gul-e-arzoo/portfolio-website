@@ -58,19 +58,19 @@ const VisibilitySection = () => {
     <section className="relative w-full overflow-x-clip py-16 md:py-20 lg:py-24">
       <div className="mx-auto grid max-w-[1280px] items-start gap-10 px-3 min-[375px]:px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] lg:gap-12 xl:grid-cols-[1fr_440px] lg:px-8">
         <div>
-          <div className="mb-5 flex justify-start">
+          <div className="mb-5 flex justify-center lg:justify-start">
             <span className="inline-flex h-[34px] items-center justify-center rounded-full border border-[#FF7782] px-5 text-[10px] font-medium uppercase tracking-wide text-white">
               {whoItsForIntro.badge}
             </span>
           </div>
 
-          <h2 className="max-w-[560px] font-bricolage text-[24px] font-extrabold leading-[1.12] tracking-[-0.03em] text-white min-[375px]:text-[26px] min-[425px]:text-[28px] sm:text-[34px] md:text-[40px] lg:text-[42px]">
+          <h2 className="mx-auto max-w-[560px] text-center font-bricolage lg:mx-0 lg:text-left text-[24px] font-extrabold leading-[1.12] tracking-[-0.03em] text-white min-[375px]:text-[26px] min-[425px]:text-[28px] sm:text-[34px] md:text-[40px] lg:text-[42px]">
             {whoItsForIntro.titleBefore}{" "}
             <span className="text-[#FF7782]">{whoItsForIntro.titleHighlight}</span>{" "}
             {whoItsForIntro.titleAfter}
           </h2>
 
-          <p className="mt-5 max-w-[520px] text-[14px] font-medium leading-relaxed text-white/75 md:text-[15px]">
+          <p className="mx-auto mt-5 max-w-[520px] text-center text-[14px] font-medium lg:mx-0 lg:text-left leading-relaxed text-white/75 md:text-[15px]">
             {whoItsForIntro.description}
           </p>
 

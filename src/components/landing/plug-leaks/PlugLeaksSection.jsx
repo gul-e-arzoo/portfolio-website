@@ -59,8 +59,8 @@ const PlugLeaksSection = () => {
       />
 
       <div className="relative z-10 mx-auto grid max-w-[1280px] items-start gap-10 px-3 min-[375px]:gap-12 min-[375px]:px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)] lg:gap-14 xl:grid-cols-[1fr_480px] lg:px-8">
-        <div className="lg:pt-2">
-          <div className="mb-5 flex justify-start">
+        <div className="text-center lg:pt-2 lg:text-left">
+          <div className="mb-5 flex justify-center lg:justify-start">
             <span className="inline-flex h-[34px] items-center justify-center rounded-full border border-[#FF7782] px-5 text-[10px] font-medium uppercase tracking-wide text-white">
               {plugLeaksIntro.badge}
             </span>
@@ -72,11 +72,11 @@ const PlugLeaksSection = () => {
             <span className="text-[#FF7782]">{plugLeaksIntro.titleLine2}</span>
           </h2>
 
-          <p className="mt-5 max-w-[520px] text-[14px] leading-relaxed text-white/80 md:text-[15px]">
+          <p className="mx-auto mt-5 max-w-[520px] text-[14px] leading-relaxed text-white/80 lg:mx-0 md:text-[15px]">
             {plugLeaksIntro.description}
           </p>
 
-          <div className="mt-8 max-w-[520px] border-b border-l border-[#FF7782]/45 bg-[#FF7782]/[0.04] px-5 py-4">
+          <div className="mx-auto mt-8 max-w-[520px] border-b border-l lg:mx-0 border-[#FF7782]/45 bg-[#FF7782]/[0.04] px-5 py-4">
             <p className="text-[13px] leading-relaxed text-white/85 md:text-sm">
               {plugLeaksIntro.callout}
             </p>
